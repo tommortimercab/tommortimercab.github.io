@@ -1,5 +1,6 @@
+body {overflow: hidden;}
 .container {max-width: 1200px;margin: 0 auto;}
-.logo-img {-webkit-filter: drop-shadow(1px 1px 0 white) drop-shadow(-1px -1px 0 white);filter: drop-shadow(1px 1px 0 white) drop-shadow(-1px -1px 0 white);}
+.logo-img {width: 50%;}
 h1 {display: inline;}
 .h2, .h3 {margin-top: 0;}
 h2 a, .h3 a, footer a {color: #004b88 !important;}
