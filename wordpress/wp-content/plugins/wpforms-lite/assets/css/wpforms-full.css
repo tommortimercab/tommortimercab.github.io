@@ -64,6 +64,7 @@ div.wpforms-container-full .wpforms-form select {max-width: 100%;text-transform:
 div.wpforms-container-full .wpforms-form input[type=submit], div.wpforms-container-full .wpforms-form button[type=submit], div.wpforms-container-full .wpforms-form .wpforms-page-button {background-color: #eee;border: 1px solid #ddd;color: #333;font-size: 1em;padding: 10px 15px;}
 div.wpforms-container-full .wpforms-form .wpforms-page-button {font-size: .9em;font-weight: 400;margin: 0 5px;min-width: 90px;text-align: center;}
 div.wpforms-container-full .wpforms-form input[type=submit]:hover, div.wpforms-container-full .wpforms-form input[type=submit]:active, div.wpforms-container-full .wpforms-form button[type=submit]:hover, div.wpforms-container-full .wpforms-form button[type=submit]:active, div.wpforms-container-full .wpforms-form .wpforms-page-button:hover, div.wpforms-container-full .wpforms-form .wpforms-page-button:active {background-color: #ddd;border: 1px solid #ccc;cursor: pointer;}
+div.wpforms-container-full .wpforms-form input[type=submit]:disabled, div.wpforms-container-full .wpforms-form button[type=submit]:disabled, div.wpforms-container-full .wpforms-form .wpforms-page-button:disabled {background-color: #eee;border: 1px solid #ddd;cursor: default;opacity: .5;}
 div.wpforms-container-full .wpforms-form input:focus, div.wpforms-container-full .wpforms-form textarea:focus, div.wpforms-container-full .wpforms-form select:focus {border: 1px solid #999;}
 div.wpforms-container-full .wpforms-form input:disabled, div.wpforms-container-full .wpforms-form textarea:disabled, div.wpforms-container-full .wpforms-form select:disabled {background-color: #f9f9f9;border-color: #ddd;color: #999;cursor: not-allowed;}
 div.wpforms-container-full .wpforms-form .wpforms-error-container {color: #900;}
@@ -178,3 +179,4 @@ div.wpforms-container-full .wpforms-form .wpforms-screen-reader-element {positio
 .edit-post-visual-editor .wpforms-gutenberg-form-selector-wrap .components-base-control {width: 100%;}
 div.wpforms-gutenberg-form-selector .wpforms-form input:disabled, div.wpforms-gutenberg-form-selector .wpforms-form textarea:disabled, div.wpforms-gutenberg-form-selector .wpforms-form select:disabled {background-color: #fff;border-color: #ccc;color: #333;cursor: not-allowed;}
 div.wpforms-gutenberg-form-selector .wpforms-form button[type=submit]:disabled {cursor: not-allowed;}
+div.components-panel__body .wpforms-gutenberg-panel-notice {background-color: #d9edf7;border: 1px solid #bce8f1;color: #31708f;padding: 10px;}
