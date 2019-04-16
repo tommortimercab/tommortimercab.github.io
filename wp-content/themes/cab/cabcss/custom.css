@@ -1,4 +1,4 @@
-body {overflow: hidden;}
+body {overflow-x: hidden;}
 .container {max-width: 1200px;margin: 0 auto;}
 .logo-img {width: 50%;}
 h1 {display: inline;}
