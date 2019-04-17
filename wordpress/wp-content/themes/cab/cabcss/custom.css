@@ -108,3 +108,18 @@ article li {
 .unstyled ul li a {
     color: black;
 }
+
+.asl_res_url {
+    font-size: 16pt!important;
+    line-height:normal!important;
+    font-weight:bold!important;
+    color: #004B88!important;
+}
+
+.asl_desc {
+    line-height:normal!important;
+}
+
+input.orig {
+    font-size: 16pt!important; 
+}
