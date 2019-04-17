@@ -1,26 +1,110 @@
-@font-face {font-family: "cab-iconsregular";src: url("../fonts/cab-icons.woff2") format("woff2"),url("../fonts/cab-icons.woff") format("woff");font-weight: normal;font-style: normal;}
-body {overflow-x: hidden;font-family: "Open Sans",sans-serif;}
-.container {max-width: 1200px;margin: 0 auto;}
-.logo-img {width: 50%;}
-h1 {display: inline;}
-.h2, .h3 {margin-top: 0;}
-h2 a, .h3 a, footer a {color: #004b88 !important;}
-h3 {color: #004b88 !important;}
-.unstyled ul li {list-style: none;}
-.unstyled ul {padding-left: 0;}
-nav.unstyled {padding-left: 1rem;}
-.unstyled p span.separator {font-family: "cab-iconsregular";margin-left: 5px;margin-right: 5px;}
-.w-full.text-left.p-5 .unstyled ul li {margin-bottom: 15px;}
-.invisible {display: none;}
-.wpforms-submit {background-color: #81cec6 !important;border: 1px solid #81cec6 !important;color: #004b88 !important;font-weight: bold;}
-div[id*='ajaxsearchlite'].wpdreams_asl_container {height: 30%;margin-top: 35px !important;margin-right: 10px !important;margin-left: 21px !important;}
-a.view-article {display: block;margin-top: 10px;}
-nav.unstyled p {font-size: 14pt;}
-nav.unstyled p a {text-decoration: underline;}
-article {padding-right: 40px;line-height: normal !important;}
-h2 {font-size: 36pt !important;font-weight: 800 !important;line-height: normal !important;}
-h3 {font-size: 24pt !important;line-height: normal !important;}
-h3 b {font-size: 28pt !important;}
-p, ul li, strong, label, form ul, .wpforms-field-description, button {font-size: 16pt !important;}
-article li {padding-bottom: 5px;}
-.unstyled ul li a {color: black;}
+@font-face {
+    font-family: 'cab-iconsregular';
+    src: url('../fonts/cab-icons.woff2') format('woff2'),
+         url('../fonts/cab-icons.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Open Sans', sans-serif;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.logo-img {
+    width: 50%;
+}
+h1 {
+    display: inline;
+}
+.h2, .h3 {
+    margin-top:0;   
+}
+h2 a, .h3 a, footer a {
+    color: #004B88!important;
+}
+h3 {
+    color: #004B88!important;
+}
+.unstyled ul li {
+    list-style:none;
+}
+.unstyled ul {
+    padding-left: 0;
+}
+nav.unstyled {
+    padding-left: 1rem;
+}
+.unstyled p span.separator {
+    font-family: 'cab-iconsregular';
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.w-full.text-left.p-5 .unstyled ul li {
+    margin-bottom: 15px;
+}
+.invisible {
+    display:none;
+}
+.wpforms-submit {
+    background-color: #81cec6!important;
+    border: 1px solid #81cec6!important;
+    color: #004b88!important;
+    font-weight: bold;
+}
+div[id*='ajaxsearchlite'].wpdreams_asl_container {
+    height: 30%;
+    margin-top: 35px!important;
+    margin-right:10px!important;
+    margin-left:21px!important;
+}
+a.view-article {
+    display:block;
+    margin-top:10px;
+}
+
+/* specific tweaks */
+
+nav.unstyled p {
+    font-size: 14pt;
+}
+nav.unstyled p a {
+    text-decoration:underline;
+}
+
+article {
+    padding-right: 40px;
+    line-height:normal!important;
+}
+
+h2 {
+    font-size: 36pt!important;
+    font-weight: 800!important;
+    line-height:normal!important;
+}
+
+/*sidenav*/
+h3 {
+    font-size: 24pt!important;
+    line-height:normal!important;
+    font-weight:bold!important;
+}
+
+h3 b {
+    font-size: 28pt!important;
+}
+
+p, ul li, strong, label, form ul, .wpforms-field-description, button {
+    font-size: 16pt!important;
+}
+
+article li {
+    padding-bottom:5px;
+}
+
+.unstyled ul li a {
+    color: black;
+}
