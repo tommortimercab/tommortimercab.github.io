@@ -123,3 +123,6 @@ article li {
 input.orig {
     font-size: 16pt!important; 
 }
+a:hover{
+    text-decoration: underline!important;
+}
