@@ -27,6 +27,7 @@
 }
 .main-content p, .main-content ul li, .main-content strong, .main-content label, .main-content button {
     font-size: 16pt!important;
+    line-height:normal!important;
 }
 .main-content li {
     margin-bottom: 5px;
