@@ -41,3 +41,19 @@
     border-radius: 0;
     margin-top: 1em;
 }
+.main-content input {
+    background-color: #fff;
+    box-sizing: border-box;
+    border-radius: 2px;
+    color: #333;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    display: block;
+    float: none;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    padding: 6px 10px;
+    height: 38px;
+    width: 423px;
+    line-height: 1.3;
+}
