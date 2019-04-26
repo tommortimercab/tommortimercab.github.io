@@ -1,113 +1,43 @@
 
-/* new-content is the wrapper class */
-
-/*.container {
-    max-width: 1200px;
-    margin: 0 auto;
-}*/
-.new-content .logo-img {
-    width: 50%;
+/* main-content is the wrapper class */
+.main-content {
+    margin-bottom: 5em;
 }
-.new-content h1 {
-    display: inline;
+.main-content h1 {
+    color: #004B88!important;
+    margin-bottom:0;
+    font-size: 36pt!important;
+    font-weight: 800!important;
+    line-height:normal!important;
+    margin-bottom: 1rem;
 }
-.new-content .h2, .h3 {
+.main-content h1, .main-content h2 {
     margin-top:0;   
 }
-.new-content h2 a, .h3 a, footer a {
+.main-content h1 a, .main-content h2 a{
     color: #004B88!important;
 }
-.new-content h3 {
+.main-content h2 {
     color: #004B88!important;
+    font-size: 24pt!important;
+    line-height:normal!important;
+    font-weight:bold!important;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
-.new-content .unstyled ul li {
-    list-style:none;
+.main-content p, .main-content ul li, .main-content strong, .main-content label, .main-content button {
+    font-size: 16pt!important;
 }
-.new-content .unstyled ul {
-    padding-left: 0;
+.main-content li {
+    margin-bottom: 5px;
 }
-.new-content nav.unstyled {
-    padding-left: 1rem;
-}
-.new-content .unstyled p span.separator {
-    font-family: 'cab-iconsregular';
-    margin-left: 5px;
-    margin-right: 5px;
-}
-.new-content .w-full.text-left.p-5 .unstyled ul li {
-    margin-bottom: 15px;
-}
-.new-content .invisible {
-    display:none;
-}
-.new-content .wpforms-submit {
+.main-content button {
     background-color: #81cec6!important;
     border: 1px solid #81cec6!important;
     color: #004b88!important;
     font-weight: bold;
+    vertical-align: middle;
+    padding: 12px 15px;
+    border-radius: 0;
+    margin-top: 1em;
 }
-.new-content a.view-article {
-    display:block;
-    margin-top:10px;
-}
-
-/* specific tweaks */
-
-.new-content nav.unstyled p {
-    font-size: 14pt;
-}
-.new-content nav.unstyled p a {
-    text-decoration:underline;
-}
-
-.new-content article {
-    padding-right: 40px;
-    line-height:normal!important;
-}
-
-.new-content h2 {
-    font-size: 36pt!important;
-    font-weight: 800!important;
-    line-height:normal!important;
-}
-
-/*sidenav*/
-/* h3 {
-    font-size: 24pt!important;
-    line-height:normal!important;
-    font-weight:bold!important;
-}
-
-h3 b {
-    font-size: 28pt!important;
-}
-
-p, ul li, strong, label, form ul, .wpforms-field-description, button {
-    font-size: 16pt!important;
-}
-
-article li {
-    padding-bottom:5px;
-}
-
-.unstyled ul li a {
-    color: black;
-}
-
-.asl_res_url {
-    font-size: 16pt!important;
-    line-height:normal!important;
-    font-weight:bold!important;
-    color: #004B88!important;
-}
-
-.asl_desc {
-    line-height:normal!important;
-}
-
-input.orig {
-    font-size: 16pt!important; 
-}
-a:hover{
-    text-decoration: underline!important;
-}*/ 
