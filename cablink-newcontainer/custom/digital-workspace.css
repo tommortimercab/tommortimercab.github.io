@@ -63,6 +63,6 @@
     width: 423px;
     line-height: 1.3;
 }
-.main-content.page-info.info-reviewed {
+.main-content .page-info.info-reviewed {
     display:none;
 }
