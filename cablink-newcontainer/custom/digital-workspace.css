@@ -43,7 +43,7 @@
     margin-top: 1em;
 }
 
-.main-content button span {
+.main-content button b {
     font-family: cab-icons!important;
     color: white;
 }
