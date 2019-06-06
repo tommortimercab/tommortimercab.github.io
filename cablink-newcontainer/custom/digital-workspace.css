@@ -5,3 +5,6 @@
 .main-content .page-info.info-reviewed {
     display:none;
 }
+i.icon-guillemet-right.side-nav__current__icon {
+    margin-left: 10px;
+}
