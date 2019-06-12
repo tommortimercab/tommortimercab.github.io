@@ -12,12 +12,12 @@ p {
     -webkit-margin-after: 0;
 }
 .large {
-	font-family: 'arial, sans-serif';
+	font-family: arial;
 	font-size: 196.43px;
 	color: white;
 }
 .small {
-	font-family: 'arial, sans-serif';
+	font-family: arial;
 	font-size: 26px;
 	color: white;
 }
@@ -28,7 +28,7 @@ p {
 }  
 #gCal {
     margin-left: 878px;
-    margin-top: -37px;
+    margin-top: 0;
     height: 280px;
 }
 #authorize-div {
