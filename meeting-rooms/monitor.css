@@ -18,8 +18,12 @@ p {
 }
 #gCal {
     margin-left: 878px;
-    margin-top: -40px;
-    height: 280px;
+    margin-top: -80px;
+    line-height: 80px;
+}
+#header {
+	margin-left: 878px;
+    margin-top: 40px;
     line-height: 80px;
 }
 #authorize-div {
