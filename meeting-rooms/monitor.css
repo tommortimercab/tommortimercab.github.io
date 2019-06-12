@@ -11,21 +11,11 @@ p {
 	-webkit-margin-before: 0;
     -webkit-margin-after: 0;
 }
-.large {
-	font-family: arial;
-	font-size: 196.43px;
-	color: white;
-}
 .small {
 	font-family: arial;
 	font-size: 26px;
 	color: white;
 }
-#air {
-	position:absolute;
-	margin-top: 50px;
-    margin-left: 51px;
-}  
 #gCal {
     margin-left: 878px;
     margin-top: 0;
