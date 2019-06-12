@@ -1,0 +1,66 @@
+/* This is all self explanatory CSS. The layout is entirely fixed width and absolute positioned for a 1920x1080 display resolution. Replace the REDACTED font tags with your own fonts! */
+body {
+	width:1920px;
+	height:1080px;
+	background:url('blank_bg.png');
+	margin:0;
+	overflow:hidden;
+}
+p {
+	padding:0;
+	-webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+}
+@font-face {
+    font-family: 'REDACTED';
+    src: url('REDACTED') format('woff2'),
+         url('REDACTED') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+	font-family: 'REDACTED';
+	src: url('REDACTED');
+	src: url('REDACTED') format('embedded-opentype'),
+		url('REDACTED') format('woff'),
+		url('REDACTED') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+.large {
+	font-family: 'REDACTED';
+	font-size: 196.43px;
+	color: white;
+}
+.small {
+	font-family: 'REDACTED';
+	font-size: 62.5px;
+	color: white;
+}
+.medbold {
+	font-family: 'REDACTED';
+	font-size: 111.65px;
+	color: white;
+	margin-bottom: 18px;
+}
+.med {
+	font-family: 'REDACTED';
+	font-size: 111.65px;
+	color: white;
+	margin-bottom: 18px;
+}
+#air {
+	position:absolute;
+	margin-top: 50px;
+    margin-left: 51px;
+}  
+#gCal {
+    margin-left: 878px;
+    margin-top: -37px;
+    height: 280px;
+}
+#authorize-div {
+	position: absolute;
+    top: 0;
+}
