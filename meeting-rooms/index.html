@@ -77,7 +77,8 @@
             'timeMin': (new Date()).toISOString(),
             'showDeleted': false,
             'singleEvents': true,
-            'maxResults': 8
+            'maxResults': 8,
+            'orderBy': 'startTime'
           });
 
           request.execute(function(resp) {
