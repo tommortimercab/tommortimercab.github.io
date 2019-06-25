@@ -21,3 +21,18 @@ i.icon-guillemet-right.side-nav__current__icon {
     line-height: 1;
     -webkit-font-smoothing: antialiased;
 }
+.footer-feedback__content.c-footer-feedback__body {
+    border-top: 1px solid #eee;
+}
+.side-nav__current {
+    color: #004b88;
+    text-decoration: none;
+    background-color: #e3f4ff;
+    border-radius: 2px;
+}
+.icon-guillemet-right.side-nav__current__icon {
+    display: none;
+}
+.side-nav__ul--level1 {
+    margin-left: -15px;
+}
