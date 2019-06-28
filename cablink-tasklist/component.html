@@ -65,13 +65,13 @@
         <div class="panel-heading">
           <h4 class="panel-title">
             <a on-click="{{clickOne}}">
-              <content select="question1"></content>
+              <content select="taskHeader1"></content>
             </a>
           </h4>
         </div>
         <div id="collapseOne" class="panel-collapse collapse in">
           <div class="panel-body">
-            <content select="answer1"></content>
+            <content select="taskDetail1"></content>
           </div>
         </div>
       </div>
@@ -79,13 +79,13 @@
         <div class="panel-heading">
           <h4 class="panel-title">
             <a on-click="{{clickTwo}}">
-              <content select="question2"></content>
+              <content select="taskHeader2"></content>
             </a>
           </h4>
         </div>
         <div id="collapseTwo" class="panel-collapse collapse">
           <div class="panel-body">
-            <content select="answer2"></content>
+            <content select="taskDetail2"></content>
           </div>
         </div>
       </div>
@@ -93,13 +93,111 @@
         <div class="panel-heading">
           <h4 class="panel-title">
             <a on-click="{{clickThree}}">
-              <content select="question3"></content>
+              <content select="taskHeader3"></content>
             </a>
           </h4>
         </div>
         <div id="collapseThree" class="panel-collapse collapse">
           <div class="panel-body">
-            <content select="answer3"></content>
+            <content select="taskDetail3"></content>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a on-click="{{clickFour}}">
+              <content select="taskHeader4"></content>
+            </a>
+          </h4>
+        </div>
+        <div id="collapseThree" class="panel-collapse collapse">
+          <div class="panel-body">
+            <content select="taskDetail4"></content>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a on-click="{{clickFive}}">
+              <content select="taskHeader5"></content>
+            </a>
+          </h4>
+        </div>
+        <div id="collapseThree" class="panel-collapse collapse">
+          <div class="panel-body">
+            <content select="taskDetail5"></content>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a on-click="{{clickSix}}">
+              <content select="taskHeader6"></content>
+            </a>
+          </h4>
+        </div>
+        <div id="collapseThree" class="panel-collapse collapse">
+          <div class="panel-body">
+            <content select="taskDetail6"></content>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a on-click="{{clickSeven}}">
+              <content select="taskHeader7"></content>
+            </a>
+          </h4>
+        </div>
+        <div id="collapseThree" class="panel-collapse collapse">
+          <div class="panel-body">
+            <content select="taskDetail7"></content>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a on-click="{{clickEight}}">
+              <content select="taskHeader8"></content>
+            </a>
+          </h4>
+        </div>
+        <div id="collapseThree" class="panel-collapse collapse">
+          <div class="panel-body">
+            <content select="taskDetail8"></content>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a on-click="{{clickNine}}">
+              <content select="taskHeader9"></content>
+            </a>
+          </h4>
+        </div>
+        <div id="collapseThree" class="panel-collapse collapse">
+          <div class="panel-body">
+            <content select="taskDetail9"></content>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a on-click="{{clickTen}}">
+              <content select="taskHeader10"></content>
+            </a>
+          </h4>
+        </div>
+        <div id="collapseThree" class="panel-collapse collapse">
+          <div class="panel-body">
+            <content select="taskDetail10"></content>
           </div>
         </div>
       </div>
@@ -132,6 +230,77 @@
     
       clickThree: function() {
     
+      if (this.$.collapseThree.className.match(/\bpanel-collapse collapse in\b/)) {
+        this.$.collapseThree.className = "panel-collapse collapse";
+      }
+      else {
+        this.$.collapseThree.className = "panel-collapse collapse in";
+      }
+        
+      },
+
+      clickFour: function() {
+    
+      if (this.$.collapseThree.className.match(/\bpanel-collapse collapse in\b/)) {
+        this.$.collapseThree.className = "panel-collapse collapse";
+      }
+      else {
+        this.$.collapseThree.className = "panel-collapse collapse in";
+      }
+        
+      },
+      clickFive: function() {
+      
+      if (this.$.collapseThree.className.match(/\bpanel-collapse collapse in\b/)) {
+        this.$.collapseThree.className = "panel-collapse collapse";
+      }
+      else {
+        this.$.collapseThree.className = "panel-collapse collapse in";
+      }
+        
+      },
+      clickSix: function() {
+      
+      if (this.$.collapseThree.className.match(/\bpanel-collapse collapse in\b/)) {
+        this.$.collapseThree.className = "panel-collapse collapse";
+      }
+      else {
+        this.$.collapseThree.className = "panel-collapse collapse in";
+      }
+        
+      },
+      clickSeven: function() {
+      
+      if (this.$.collapseThree.className.match(/\bpanel-collapse collapse in\b/)) {
+        this.$.collapseThree.className = "panel-collapse collapse";
+      }
+      else {
+        this.$.collapseThree.className = "panel-collapse collapse in";
+      }
+        
+      },
+      clickEight: function() {
+      
+      if (this.$.collapseThree.className.match(/\bpanel-collapse collapse in\b/)) {
+        this.$.collapseThree.className = "panel-collapse collapse";
+      }
+      else {
+        this.$.collapseThree.className = "panel-collapse collapse in";
+      }
+        
+      },
+      clickNine: function() {
+      
+      if (this.$.collapseThree.className.match(/\bpanel-collapse collapse in\b/)) {
+        this.$.collapseThree.className = "panel-collapse collapse";
+      }
+      else {
+        this.$.collapseThree.className = "panel-collapse collapse in";
+      }
+        
+      },
+      clickTen: function() {
+      
       if (this.$.collapseThree.className.match(/\bpanel-collapse collapse in\b/)) {
         this.$.collapseThree.className = "panel-collapse collapse";
       }
