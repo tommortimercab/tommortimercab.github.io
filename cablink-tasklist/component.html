@@ -1,0 +1,147 @@
+<polymer-element name="dynamic-accordion">
+  <template>
+    <style>
+      a {
+      text-decoration:none;
+      }
+      .panel-group {
+      margin-bottom: 20px;
+      font-family: "arial", sans-serif;
+      }
+      .panel-group .panel {
+      margin-bottom: 0;
+      border-radius: 4px;
+      }
+      .panel-default {
+      border-color: #ddd;
+      }
+      .panel {
+      margin-bottom: 20px;
+      background-color: #fff;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      }
+      .panel-default>.panel-heading {
+      color: #333;
+      background-color: #f5f5f5;
+      border-color: #ddd;
+      }
+      .panel-group .panel-heading {
+      border-bottom: 0;
+      }
+      .panel-heading {
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+      }
+      .panel-title {
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 16px;
+      color: inherit;
+      cursor: pointer;
+      }
+      .panel-title>a {
+      color: inherit;
+      }
+      .collapse.in {
+      display: block;
+      }
+      .collapse {
+      display: none;
+      }
+      .panel-default>.panel-heading+.panel-collapse>.panel-body {
+      border-top-color: #ddd;
+      }
+      .panel-group .panel-heading+.panel-collapse>.panel-body {
+      border-top: 1px solid #ddd;
+      }
+      .panel-body {
+      padding: 15px;
+      }
+    </style>
+    <div class="panel-group">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a on-click="{{clickOne}}">
+              <content select="question1"></content>
+            </a>
+          </h4>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse in">
+          <div class="panel-body">
+            <content select="answer1"></content>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a on-click="{{clickTwo}}">
+              <content select="question2"></content>
+            </a>
+          </h4>
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse">
+          <div class="panel-body">
+            <content select="answer2"></content>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a on-click="{{clickThree}}">
+              <content select="question3"></content>
+            </a>
+          </h4>
+        </div>
+        <div id="collapseThree" class="panel-collapse collapse">
+          <div class="panel-body">
+            <content select="answer3"></content>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script>
+    Polymer({
+ 
+      clickOne: function() {
+    
+      if (this.$.collapseOne.className.match(/\bpanel-collapse collapse in\b/)) {
+        this.$.collapseOne.className = "panel-collapse collapse";
+      }
+      else {
+        this.$.collapseOne.className = "panel-collapse collapse in";
+      }
+        
+      },
+    
+      clickTwo: function() {
+    
+      if (this.$.collapseTwo.className.match(/\bpanel-collapse collapse in\b/)) {
+        this.$.collapseTwo.className = "panel-collapse collapse";
+      }
+      else {
+        this.$.collapseTwo.className = "panel-collapse collapse in";
+      }
+        
+      },
+    
+      clickThree: function() {
+    
+      if (this.$.collapseThree.className.match(/\bpanel-collapse collapse in\b/)) {
+        this.$.collapseThree.className = "panel-collapse collapse";
+      }
+      else {
+        this.$.collapseThree.className = "panel-collapse collapse in";
+      }
+        
+      },
+    
+    });
+
+  </script>
+</polymer-element>
