@@ -68,13 +68,16 @@
         margin-top: 0;
         font-size: 61px;
       }
+      .chevron.rotated {
+        transform: rotate(270deg);
+      }
     </style>
     <div class="panel-group">
       <div class="panel panel-default">
         <div class="panel-heading">
           <h2 class="panel-title">
             <a on-click="{{clickOne}}">
-              <p class="chevron">&rsaquo;</p>
+              <p class="chevron" id="chevronOne">&rsaquo;</p>
               <content select="task-header1"></content>
             </a>
           </h2>
@@ -89,6 +92,7 @@
         <div class="panel-heading">
           <h2 class="panel-title">
             <a on-click="{{clickTwo}}">
+              <p class="chevron" id="chevronTwo">&rsaquo;</p>
               <content select="task-header2"></content>
             </a>
           </h2>
@@ -103,6 +107,7 @@
         <div class="panel-heading">
           <h2 class="panel-title">
             <a on-click="{{clickThree}}">
+              <p class="chevron" id="chevronThree">&rsaquo;</p>
               <content select="task-header3"></content>
             </a>
           </h2>
@@ -117,6 +122,7 @@
         <div class="panel-heading">
           <h2 class="panel-title">
             <a on-click="{{clickFour}}">
+              <p class="chevron" id="chevronFour">&rsaquo;</p>
               <content select="task-header4"></content>
             </a>
           </h2>
@@ -131,6 +137,7 @@
         <div class="panel-heading">
           <h2 class="panel-title">
             <a on-click="{{clickFive}}">
+              <p class="chevron" id="chevronSix">&rsaquo;</p>
               <content select="task-header5"></content>
             </a>
           </h2>
@@ -145,6 +152,7 @@
         <div class="panel-heading">
           <h2 class="panel-title">
             <a on-click="{{clickSix}}">
+              <p class="chevron" id="chevronSix">&rsaquo;</p>
               <content select="task-header6"></content>
             </a>
           </h2>
@@ -159,6 +167,7 @@
         <div class="panel-heading">
           <h2 class="panel-title">
             <a on-click="{{clickSeven}}">
+              <p class="chevron" id="chevronSeven">&rsaquo;</p>
               <content select="task-header7"></content>
             </a>
           </h2>
@@ -173,6 +182,7 @@
         <div class="panel-heading">
           <h2 class="panel-title">
             <a on-click="{{clickEight}}">
+              <p class="chevron" id="chevronEight">&rsaquo;</p>
               <content select="task-header8"></content>
             </a>
           </h2>
@@ -187,6 +197,7 @@
         <div class="panel-heading">
           <h2 class="panel-title">
             <a on-click="{{clickNine}}">
+              <p class="chevron" id="chevronNine">&rsaquo;</p>
               <content select="task-header9"></content>
             </a>
           </h2>
@@ -201,6 +212,7 @@
         <div class="panel-heading">
           <h2 class="panel-title">
             <a on-click="{{clickTen}}">
+              <p class="chevron" id="chevronTen">&rsaquo;</p>
               <content select="task-header10"></content>
             </a>
           </h2>
@@ -217,12 +229,14 @@
     Polymer({
  
       clickOne: function() {
-    
+      
       if (this.$.collapseOne.className.match(/\bpanel-collapse collapse in\b/)) {
         this.$.collapseOne.className = "panel-collapse collapse";
+        this.$.chevronOne.className = "chevron";
       }
       else {
         this.$.collapseOne.className = "panel-collapse collapse in";
+        this.$.chevronOne.className = "chevron rotated";
       }
         
       },
@@ -231,9 +245,11 @@
     
       if (this.$.collapseTwo.className.match(/\bpanel-collapse collapse in\b/)) {
         this.$.collapseTwo.className = "panel-collapse collapse";
+        this.$.chevronTwo.className = "chevron";
       }
       else {
         this.$.collapseTwo.className = "panel-collapse collapse in";
+        this.$.chevronTwo.className = "chevron rotated";
       }
         
       },
@@ -242,9 +258,11 @@
     
       if (this.$.collapseThree.className.match(/\bpanel-collapse collapse in\b/)) {
         this.$.collapseThree.className = "panel-collapse collapse";
+        this.$.chevronThree.className = "chevron";
       }
       else {
         this.$.collapseThree.className = "panel-collapse collapse in";
+        this.$.chevronThree.className = "chevron rotated";
       }
         
       },
@@ -253,9 +271,11 @@
     
       if (this.$.collapseFour.className.match(/\bpanel-collapse collapse in\b/)) {
         this.$.collapseFour.className = "panel-collapse collapse";
+        this.$.chevronFour.className = "chevron";
       }
       else {
         this.$.collapseFour.className = "panel-collapse collapse in";
+        this.$.chevronFour.className = "chevron rotated";
       }
         
       },
@@ -264,9 +284,11 @@
       
       if (this.$.collapseFive.className.match(/\bpanel-collapse collapse in\b/)) {
         this.$.collapseFive.className = "panel-collapse collapse";
+        this.$.chevronFive.className = "chevron";
       }
       else {
         this.$.collapseFive.className = "panel-collapse collapse in";
+        this.$.chevronFive.className = "chevron rotated";
       }
         
       },
@@ -275,9 +297,11 @@
       
       if (this.$.collapseSix.className.match(/\bpanel-collapse collapse in\b/)) {
         this.$.collapseSix.className = "panel-collapse collapse";
+        this.$.chevronSix.className = "chevron";
       }
       else {
         this.$.collapseSix.className = "panel-collapse collapse in";
+        this.$.chevronSix.className = "chevron rotated";
       }
         
       },
@@ -286,9 +310,11 @@
       
       if (this.$.collapseSeven.className.match(/\bpanel-collapse collapse in\b/)) {
         this.$.collapseSeven.className = "panel-collapse collapse";
+        this.$.chevronSeven.className = "chevron";
       }
       else {
         this.$.collapseSeven.className = "panel-collapse collapse in";
+        this.$.chevronSeven.className = "chevron rotated";
       }
         
       },
@@ -297,9 +323,11 @@
       
       if (this.$.collapseEight.className.match(/\bpanel-collapse collapse in\b/)) {
         this.$.collapseEight.className = "panel-collapse collapse";
+        this.$.chevronEight.className = "chevron";
       }
       else {
         this.$.collapseEight.className = "panel-collapse collapse in";
+        this.$.chevronEight.className = "chevron rotated";
       }
         
       },
@@ -308,9 +336,11 @@
       
       if (this.$.collapseNine.className.match(/\bpanel-collapse collapse in\b/)) {
         this.$.collapseNine.className = "panel-collapse collapse";
+        this.$.chevronNine.className = "chevron";
       }
       else {
         this.$.collapseNine.className = "panel-collapse collapse in";
+        this.$.chevronNine.className = "chevron rotated";
       }
         
       },
@@ -319,9 +349,11 @@
       
       if (this.$.collapseTen.className.match(/\bpanel-collapse collapse in\b/)) {
         this.$.collapseTen.className = "panel-collapse collapse";
+        this.$.chevronTen.className = "chevron";
       }
       else {
         this.$.collapseTen.className = "panel-collapse collapse in";
+        this.$.chevronTen.className = "chevron rotated";
       }
         
       }
