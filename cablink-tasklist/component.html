@@ -72,12 +72,18 @@
       }
       .chevron.rotated {
         transform: rotate(270deg);
-        margin-left:545px;
+        margin-left:540px;
+      }
+      .circle:before {
+        content: ' \25CF';
+        font-size: 200px;
+        color: #004b88;
       }
     </style>
     <div class="panel-group">
       <div class="panel panel-default">
         <div class="panel-heading">
+          <span class="circle"></span>
           <h2 class="panel-title">
             <a on-click="{{clickOne}}">
               <p class="chevron" id="chevronOne">&rsaquo;</p>
