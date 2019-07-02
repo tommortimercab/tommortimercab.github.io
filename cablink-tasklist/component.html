@@ -26,7 +26,6 @@
         font-size: 1.75rem;
         line-height: 36px;
         line-height: 2.25rem;
-        font-weight: 700;
         color: #004b88;
       }
       .panel-default>.panel-heading {
@@ -62,14 +61,21 @@
       padding: 15px;
       padding-left:20px;
       }
+      .chevron {
+        color: black;
+        transform: rotate(90deg);
+        float: right;
+        margin-top: 0;
+        font-size: 61px;
+      }
     </style>
     <div class="panel-group">
       <div class="panel panel-default">
         <div class="panel-heading">
           <h2 class="panel-title">
             <a on-click="{{clickOne}}">
+              <p class="chevron">&rsaquo;</p>
               <content select="task-header1"></content>
-              <span class="chevron">&rsaquo;</span>
             </a>
           </h2>
         </div>
