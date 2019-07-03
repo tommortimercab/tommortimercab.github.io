@@ -105,7 +105,7 @@
         margin-left: 60px;
         margin-top:18px;
       }
-      /* The next two lines are a temporary bodge for the demo! */
+      /* The next two lines are a temporary bodge for the demo, to hide the line extending too far from the last station. Need a proper solution for prod */
       .final-section .square {
         display:none;
       }
@@ -118,10 +118,10 @@
     </style>
     <div class="panel-group">
       <div class="panel panel-default">
-        <div class="panel-heading" id="panelHeadOne">
+        <div class="panel-heading">
           <div class="square"></div>
           <div class="circle"></div>
-          <h2 class="panel-title">
+          <h2 class="panel-title" id="panelHeadOne">
             <a on-click="{{clickOne}}">
               <p class="chevron" id="chevronOne">&#58864;</p>
               <content select="task-header1"></content>
@@ -136,10 +136,10 @@
         </div>
       </div>
       <div class="panel panel-default">
-        <div class="panel-heading" id="panelHeadTwo">
+        <div class="panel-heading">
           <div class="square"></div>
           <div class="circle"></div>
-          <h2 class="panel-title">
+          <h2 class="panel-title" id="panelHeadTwo">
             <a on-click="{{clickTwo}}">
               <p class="chevron" id="chevronTwo">&#58864;</p>
               <content select="task-header2"></content>
@@ -154,10 +154,10 @@
         </div>
       </div>
       <div class="panel panel-default">
-        <div class="panel-heading" id="panelHeadThree">
+        <div class="panel-heading">
           <div class="square"></div>
           <div class="circle"></div>
-          <h2 class="panel-title">
+          <h2 class="panel-title" id="panelHeadThree">
             <a on-click="{{clickThree}}">
               <p class="chevron" id="chevronThree">&#58864;</p>
               <content select="task-header3"></content>
@@ -172,10 +172,10 @@
         </div>
       </div>
       <div class="panel panel-default">
-        <div class="panel-heading" id="panelHeadFour">
+        <div class="panel-heading">
           <div class="square"></div>
           <div class="circle"></div>
-          <h2 class="panel-title">
+          <h2 class="panel-title" id="panelHeadFour">
             <a on-click="{{clickFour}}">
               <p class="chevron" id="chevronFour">&#58864;</p>
               <content select="task-header4"></content>
@@ -190,10 +190,10 @@
         </div>
       </div>
       <div class="panel panel-default">
-        <div class="panel-heading" id="panelHeadFive">
+        <div class="panel-heading">
           <div class="square"></div>
           <div class="circle"></div>
-          <h2 class="panel-title">
+          <h2 class="panel-title" id="panelHeadFive">
             <a on-click="{{clickFive}}">
               <p class="chevron" id="chevronFive">&#58864;</p>
               <content select="task-header5"></content>
@@ -208,10 +208,10 @@
         </div>
       </div>
       <div class="panel panel-default">
-        <div class="panel-heading" id="panelHeadSix">
+        <div class="panel-heading">
           <div class="square"></div>
           <div class="circle"></div>
-          <h2 class="panel-title">
+          <h2 class="panel-title" id="panelHeadSix">
             <a on-click="{{clickSix}}">
               <p class="chevron" id="chevronSix">&#58864;</p>
               <content select="task-header6"></content>
@@ -226,10 +226,10 @@
         </div>
       </div>
       <div class="panel panel-default">
-        <div class="panel-heading" id="panelHeadSeven">
+        <div class="panel-heading">
           <div class="square"></div>
           <div class="circle"></div>
-          <h2 class="panel-title">
+          <h2 class="panel-title" id="panelHeadSeven">
             <a on-click="{{clickSeven}}">
               <p class="chevron" id="chevronSeven">&#58864;</p>
               <content select="task-header7"></content>
@@ -244,10 +244,10 @@
         </div>
       </div>
       <div class="panel panel-default">
-        <div class="panel-heading" id="panelHeadEight">
+        <div class="panel-heading">
           <div class="square"></div>
           <div class="circle"></div>
-          <h2 class="panel-title">
+          <h2 class="panel-title" id="panelHeadEight">
             <a on-click="{{clickEight}}">
               <p class="chevron" id="chevronEight">&#58864;</p>
               <content select="task-header8"></content>
@@ -262,10 +262,10 @@
         </div>
       </div>
       <div class="panel panel-default">
-        <div class="panel-heading" id="panelHeadNine">
+        <div class="panel-heading">
           <div class="square"></div>
           <div class="circle"></div>
-          <h2 class="panel-title">
+          <h2 class="panel-title" id="panelHeadNine">
             <a on-click="{{clickNine}}">
               <p class="chevron" id="chevronNine">&#58864;</p>
               <content select="task-header9"></content>
@@ -280,10 +280,10 @@
         </div>
       </div>
       <div class="panel panel-default final-section">
-        <div class="panel-heading" id="panelHeadTen">
+        <div class="panel-heading">
           <div class="square"></div>
           <div class="circle"></div>
-          <h2 class="panel-title">
+          <h2 class="panel-title" id="panelHeadTen">
             <a on-click="{{clickTen}}">
               <p class="chevron" id="chevronTen">&#58864;</p>
               <content select="task-header10"></content>
@@ -309,22 +309,22 @@
       if (this.$.collapseOne.className.match(/\bpanel-collapse collapse in\b/)) {
         this.$.collapseOne.className = "panel-collapse collapse";
         this.$.chevronOne.className = "chevron";
-        this.$.panelHeadOne.className = "panel-heading";
+        this.$.panelHeadOne.className = "panel-title";
       }
       else {
         this.$.collapseOne.className = "panel-collapse collapse in";
         this.$.chevronOne.className = "chevron rotated";
-        this.$.panelHeadOne.className = "panel-heading latest";
+        this.$.panelHeadOne.className = "panel-title latest";
         // my sincere apologies for the state of this
-        this.$.panelHeadTwo.className = "panel-heading";
-        this.$.panelHeadThree.className = "panel-heading";
-        this.$.panelHeadFour.className = "panel-heading";
-        this.$.panelHeadFive.className = "panel-heading";
-        this.$.panelHeadSix.className = "panel-heading";
-        this.$.panelHeadSeven.className = "panel-heading";
-        this.$.panelHeadEight.className = "panel-heading";
-        this.$.panelHeadNine.className = "panel-heading";
-        this.$.panelHeadTen.className = "panel-heading";
+        this.$.panelHeadTwo.className = "panel-title";
+        this.$.panelHeadThree.className = "panel-title";
+        this.$.panelHeadFour.className = "panel-title";
+        this.$.panelHeadFive.className = "panel-title";
+        this.$.panelHeadSix.className = "panel-title";
+        this.$.panelHeadSeven.className = "panel-title";
+        this.$.panelHeadEight.className = "panel-title";
+        this.$.panelHeadNine.className = "panel-title";
+        this.$.panelHeadTen.className = "panel-title";
       }
         
       },
@@ -334,22 +334,22 @@
       if (this.$.collapseTwo.className.match(/\bpanel-collapse collapse in\b/)) {
         this.$.collapseTwo.className = "panel-collapse collapse";
         this.$.chevronTwo.className = "chevron";
-        this.$.panelHeadTwo.className = "panel-heading";
+        this.$.panelHeadTwo.className = "panel-title";
       }
       else {
         this.$.collapseTwo.className = "panel-collapse collapse in";
         this.$.chevronTwo.className = "chevron rotated";
-        this.$.panelHeadTwo.className = "panel-heading latest";
+        this.$.panelHeadTwo.className = "panel-title latest";
         // let the fun begin
-        this.$.panelHeadOne.className = "panel-heading";
-        this.$.panelHeadThree.className = "panel-heading";
-        this.$.panelHeadFour.className = "panel-heading";
-        this.$.panelHeadFive.className = "panel-heading";
-        this.$.panelHeadSix.className = "panel-heading";
-        this.$.panelHeadSeven.className = "panel-heading";
-        this.$.panelHeadEight.className = "panel-heading";
-        this.$.panelHeadNine.className = "panel-heading";
-        this.$.panelHeadTen.className = "panel-heading";
+        this.$.panelHeadOne.className = "panel-title";
+        this.$.panelHeadThree.className = "panel-title";
+        this.$.panelHeadFour.className = "panel-title";
+        this.$.panelHeadFive.className = "panel-title";
+        this.$.panelHeadSix.className = "panel-title";
+        this.$.panelHeadSeven.className = "panel-title";
+        this.$.panelHeadEight.className = "panel-title";
+        this.$.panelHeadNine.className = "panel-title";
+        this.$.panelHeadTen.className = "panel-title";
       }
         
       },
@@ -359,22 +359,22 @@
       if (this.$.collapseThree.className.match(/\bpanel-collapse collapse in\b/)) {
         this.$.collapseThree.className = "panel-collapse collapse";
         this.$.chevronThree.className = "chevron";
-        this.$.panelHeadThree.className = "panel-heading";
+        this.$.panelHeadThree.className = "panel-title";
       }
       else {
         this.$.collapseThree.className = "panel-collapse collapse in";
         this.$.chevronThree.className = "chevron rotated";
-        this.$.panelHeadThree.className = "panel-heading latest";
+        this.$.panelHeadThree.className = "panel-title latest";
         // moar
-        this.$.panelHeadOne.className = "panel-heading";
-        this.$.panelHeadTwo.className = "panel-heading";
-        this.$.panelHeadFour.className = "panel-heading";
-        this.$.panelHeadFive.className = "panel-heading";
-        this.$.panelHeadSix.className = "panel-heading";
-        this.$.panelHeadSeven.className = "panel-heading";
-        this.$.panelHeadEight.className = "panel-heading";
-        this.$.panelHeadNine.className = "panel-heading";
-        this.$.panelHeadTen.className = "panel-heading";
+        this.$.panelHeadOne.className = "panel-title";
+        this.$.panelHeadTwo.className = "panel-title";
+        this.$.panelHeadFour.className = "panel-title";
+        this.$.panelHeadFive.className = "panel-title";
+        this.$.panelHeadSix.className = "panel-title";
+        this.$.panelHeadSeven.className = "panel-title";
+        this.$.panelHeadEight.className = "panel-title";
+        this.$.panelHeadNine.className = "panel-title";
+        this.$.panelHeadTen.className = "panel-title";
       }
         
       },
@@ -384,22 +384,22 @@
       if (this.$.collapseFour.className.match(/\bpanel-collapse collapse in\b/)) {
         this.$.collapseFour.className = "panel-collapse collapse";
         this.$.chevronFour.className = "chevron";
-        this.$.panelHeadFour.className = "panel-heading";
+        this.$.panelHeadFour.className = "panel-title";
       }
       else {
         this.$.collapseFour.className = "panel-collapse collapse in";
         this.$.chevronFour.className = "chevron rotated";
-        this.$.panelHeadFour.className = "panel-heading latest";
+        this.$.panelHeadFour.className = "panel-title latest";
         // moar
-        this.$.panelHeadOne.className = "panel-heading";
-        this.$.panelHeadTwo.className = "panel-heading";
-        this.$.panelHeadThree.className = "panel-heading";
-        this.$.panelHeadFive.className = "panel-heading";
-        this.$.panelHeadSix.className = "panel-heading";
-        this.$.panelHeadSeven.className = "panel-heading";
-        this.$.panelHeadEight.className = "panel-heading";
-        this.$.panelHeadNine.className = "panel-heading";
-        this.$.panelHeadTen.className = "panel-heading";
+        this.$.panelHeadOne.className = "panel-title";
+        this.$.panelHeadTwo.className = "panel-title";
+        this.$.panelHeadThree.className = "panel-title";
+        this.$.panelHeadFive.className = "panel-title";
+        this.$.panelHeadSix.className = "panel-title";
+        this.$.panelHeadSeven.className = "panel-title";
+        this.$.panelHeadEight.className = "panel-title";
+        this.$.panelHeadNine.className = "panel-title";
+        this.$.panelHeadTen.className = "panel-title";
       }
         
       },
@@ -409,22 +409,22 @@
       if (this.$.collapseFive.className.match(/\bpanel-collapse collapse in\b/)) {
         this.$.collapseFive.className = "panel-collapse collapse";
         this.$.chevronFive.className = "chevron";
-        this.$.panelHeadFive.className = "panel-heading";
+        this.$.panelHeadFive.className = "panel-title";
       }
       else {
         this.$.collapseFive.className = "panel-collapse collapse in";
         this.$.chevronFive.className = "chevron rotated";
-        this.$.panelHeadFive.className = "panel-heading latest";
+        this.$.panelHeadFive.className = "panel-title latest";
         // moar
-        this.$.panelHeadOne.className = "panel-heading";
-        this.$.panelHeadTwo.className = "panel-heading";
-        this.$.panelHeadThree.className = "panel-heading";
-        this.$.panelHeadFour.className = "panel-heading";
-        this.$.panelHeadSix.className = "panel-heading";
-        this.$.panelHeadSeven.className = "panel-heading";
-        this.$.panelHeadEight.className = "panel-heading";
-        this.$.panelHeadNine.className = "panel-heading";
-        this.$.panelHeadTen.className = "panel-heading";
+        this.$.panelHeadOne.className = "panel-title";
+        this.$.panelHeadTwo.className = "panel-title";
+        this.$.panelHeadThree.className = "panel-title";
+        this.$.panelHeadFour.className = "panel-title";
+        this.$.panelHeadSix.className = "panel-title";
+        this.$.panelHeadSeven.className = "panel-title";
+        this.$.panelHeadEight.className = "panel-title";
+        this.$.panelHeadNine.className = "panel-title";
+        this.$.panelHeadTen.className = "panel-title";
       }
         
       },
@@ -434,22 +434,22 @@
       if (this.$.collapseSix.className.match(/\bpanel-collapse collapse in\b/)) {
         this.$.collapseSix.className = "panel-collapse collapse";
         this.$.chevronSix.className = "chevron";
-        this.$.panelHeadSix.className = "panel-heading";
+        this.$.panelHeadSix.className = "panel-title";
       }
       else {
         this.$.collapseSix.className = "panel-collapse collapse in";
         this.$.chevronSix.className = "chevron rotated";
-        this.$.panelHeadSix.className = "panel-heading latest";
+        this.$.panelHeadSix.className = "panel-title latest";
         // moar
-        this.$.panelHeadOne.className = "panel-heading";
-        this.$.panelHeadTwo.className = "panel-heading";
-        this.$.panelHeadThree.className = "panel-heading";
-        this.$.panelHeadFour.className = "panel-heading";
-        this.$.panelHeadFive.className = "panel-heading";
-        this.$.panelHeadSeven.className = "panel-heading";
-        this.$.panelHeadEight.className = "panel-heading";
-        this.$.panelHeadNine.className = "panel-heading";
-        this.$.panelHeadTen.className = "panel-heading";
+        this.$.panelHeadOne.className = "panel-title";
+        this.$.panelHeadTwo.className = "panel-title";
+        this.$.panelHeadThree.className = "panel-title";
+        this.$.panelHeadFour.className = "panel-title";
+        this.$.panelHeadFive.className = "panel-title";
+        this.$.panelHeadSeven.className = "panel-title";
+        this.$.panelHeadEight.className = "panel-title";
+        this.$.panelHeadNine.className = "panel-title";
+        this.$.panelHeadTen.className = "panel-title";
       }
         
       },
@@ -459,22 +459,22 @@
       if (this.$.collapseSeven.className.match(/\bpanel-collapse collapse in\b/)) {
         this.$.collapseSeven.className = "panel-collapse collapse";
         this.$.chevronSeven.className = "chevron";
-        this.$.panelHeadSeven.className = "panel-heading";
+        this.$.panelHeadSeven.className = "panel-title";
       }
       else {
         this.$.collapseSeven.className = "panel-collapse collapse in";
         this.$.chevronSeven.className = "chevron rotated";
-        this.$.panelHeadSeven.className = "panel-heading latest";
+        this.$.panelHeadSeven.className = "panel-title latest";
         // moar
-        this.$.panelHeadOne.className = "panel-heading";
-        this.$.panelHeadTwo.className = "panel-heading";
-        this.$.panelHeadThree.className = "panel-heading";
-        this.$.panelHeadFour.className = "panel-heading";
-        this.$.panelHeadFive.className = "panel-heading";
-        this.$.panelHeadSix.className = "panel-heading";
-        this.$.panelHeadEight.className = "panel-heading";
-        this.$.panelHeadNine.className = "panel-heading";
-        this.$.panelHeadTen.className = "panel-heading";
+        this.$.panelHeadOne.className = "panel-title";
+        this.$.panelHeadTwo.className = "panel-title";
+        this.$.panelHeadThree.className = "panel-title";
+        this.$.panelHeadFour.className = "panel-title";
+        this.$.panelHeadFive.className = "panel-title";
+        this.$.panelHeadSix.className = "panel-title";
+        this.$.panelHeadEight.className = "panel-title";
+        this.$.panelHeadNine.className = "panel-title";
+        this.$.panelHeadTen.className = "panel-title";
       }
         
       },
@@ -484,22 +484,22 @@
       if (this.$.collapseEight.className.match(/\bpanel-collapse collapse in\b/)) {
         this.$.collapseEight.className = "panel-collapse collapse";
         this.$.chevronEight.className = "chevron";
-        this.$.panelHeadEight.className = "panel-heading";
+        this.$.panelHeadEight.className = "panel-title";
       }
       else {
         this.$.collapseEight.className = "panel-collapse collapse in";
         this.$.chevronEight.className = "chevron rotated";
-        this.$.panelHeadEight.className = "panel-heading latest";
+        this.$.panelHeadEight.className = "panel-title latest";
         // moar
-        this.$.panelHeadOne.className = "panel-heading";
-        this.$.panelHeadTwo.className = "panel-heading";
-        this.$.panelHeadThree.className = "panel-heading";
-        this.$.panelHeadFour.className = "panel-heading";
-        this.$.panelHeadFive.className = "panel-heading";
-        this.$.panelHeadSix.className = "panel-heading";
-        this.$.panelHeadSeven.className = "panel-heading";
-        this.$.panelHeadNine.className = "panel-heading";
-        this.$.panelHeadTen.className = "panel-heading";
+        this.$.panelHeadOne.className = "panel-title";
+        this.$.panelHeadTwo.className = "panel-title";
+        this.$.panelHeadThree.className = "panel-title";
+        this.$.panelHeadFour.className = "panel-title";
+        this.$.panelHeadFive.className = "panel-title";
+        this.$.panelHeadSix.className = "panel-title";
+        this.$.panelHeadSeven.className = "panel-title";
+        this.$.panelHeadNine.className = "panel-title";
+        this.$.panelHeadTen.className = "panel-title";
       }
         
       },
@@ -509,22 +509,22 @@
       if (this.$.collapseNine.className.match(/\bpanel-collapse collapse in\b/)) {
         this.$.collapseNine.className = "panel-collapse collapse";
         this.$.chevronNine.className = "chevron";
-        this.$.panelHeadNine.className = "panel-heading";
+        this.$.panelHeadNine.className = "panel-title";
       }
       else {
         this.$.collapseNine.className = "panel-collapse collapse in";
         this.$.chevronNine.className = "chevron rotated";
-        this.$.panelHeadNine.className = "panel-heading latest";
+        this.$.panelHeadNine.className = "panel-title latest";
         // moar
-        this.$.panelHeadOne.className = "panel-heading";
-        this.$.panelHeadTwo.className = "panel-heading";
-        this.$.panelHeadThree.className = "panel-heading";
-        this.$.panelHeadFour.className = "panel-heading";
-        this.$.panelHeadFive.className = "panel-heading";
-        this.$.panelHeadSix.className = "panel-heading";
-        this.$.panelHeadSeven.className = "panel-heading";
-        this.$.panelHeadEight.className = "panel-heading";
-        this.$.panelHeadTen.className = "panel-heading";
+        this.$.panelHeadOne.className = "panel-title";
+        this.$.panelHeadTwo.className = "panel-title";
+        this.$.panelHeadThree.className = "panel-title";
+        this.$.panelHeadFour.className = "panel-title";
+        this.$.panelHeadFive.className = "panel-title";
+        this.$.panelHeadSix.className = "panel-title";
+        this.$.panelHeadSeven.className = "panel-title";
+        this.$.panelHeadEight.className = "panel-title";
+        this.$.panelHeadTen.className = "panel-title";
       }
         
       },
@@ -534,22 +534,22 @@
       if (this.$.collapseTen.className.match(/\bpanel-collapse collapse in\b/)) {
         this.$.collapseTen.className = "panel-collapse collapse";
         this.$.chevronTen.className = "chevron";
-        this.$.panelHeadTen.className = "panel-heading";
+        this.$.panelHeadTen.className = "panel-title";
       }
       else {
         this.$.collapseTen.className = "panel-collapse collapse in";
         this.$.chevronTen.className = "chevron rotated";
-        this.$.panelHeadTen.className = "panel-heading latest";
+        this.$.panelHeadTen.className = "panel-title latest";
         // moar
-        this.$.panelHeadOne.className = "panel-heading";
-        this.$.panelHeadTwo.className = "panel-heading";
-        this.$.panelHeadThree.className = "panel-heading";
-        this.$.panelHeadFour.className = "panel-heading";
-        this.$.panelHeadFive.className = "panel-heading";
-        this.$.panelHeadSix.className = "panel-heading";
-        this.$.panelHeadSeven.className = "panel-heading";
-        this.$.panelHeadEight.className = "panel-heading";
-        this.$.panelHeadNine.className = "panel-heading";
+        this.$.panelHeadOne.className = "panel-title";
+        this.$.panelHeadTwo.className = "panel-title";
+        this.$.panelHeadThree.className = "panel-title";
+        this.$.panelHeadFour.className = "panel-title";
+        this.$.panelHeadFive.className = "panel-titleg";
+        this.$.panelHeadSix.className = "panel-title";
+        this.$.panelHeadSeven.className = "panel-title";
+        this.$.panelHeadEight.className = "panel-title";
+        this.$.panelHeadNine.className = "panel-title";
       }
         
       }
