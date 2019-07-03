@@ -112,10 +112,13 @@
       .final-section .panel-body {
         border: none;
       }
+      .latest {
+        background-color: #f2f8ff;
+      }
     </style>
     <div class="panel-group">
       <div class="panel panel-default">
-        <div class="panel-heading">
+        <div class="panel-heading" id="panelHeadOne">
           <div class="square"></div>
           <div class="circle"></div>
           <h2 class="panel-title">
@@ -133,7 +136,7 @@
         </div>
       </div>
       <div class="panel panel-default">
-        <div class="panel-heading">
+        <div class="panel-heading" id="panelHeadTwo">
           <div class="square"></div>
           <div class="circle"></div>
           <h2 class="panel-title">
@@ -151,7 +154,7 @@
         </div>
       </div>
       <div class="panel panel-default">
-        <div class="panel-heading">
+        <div class="panel-heading" id="panelHeadThree">
           <div class="square"></div>
           <div class="circle"></div>
           <h2 class="panel-title">
@@ -169,7 +172,7 @@
         </div>
       </div>
       <div class="panel panel-default">
-        <div class="panel-heading">
+        <div class="panel-heading" id="panelHeadFour">
           <div class="square"></div>
           <div class="circle"></div>
           <h2 class="panel-title">
@@ -187,7 +190,7 @@
         </div>
       </div>
       <div class="panel panel-default">
-        <div class="panel-heading">
+        <div class="panel-heading" id="panelHeadFive">
           <div class="square"></div>
           <div class="circle"></div>
           <h2 class="panel-title">
@@ -205,7 +208,7 @@
         </div>
       </div>
       <div class="panel panel-default">
-        <div class="panel-heading">
+        <div class="panel-heading" id="panelHeadSix">
           <div class="square"></div>
           <div class="circle"></div>
           <h2 class="panel-title">
@@ -223,7 +226,7 @@
         </div>
       </div>
       <div class="panel panel-default">
-        <div class="panel-heading">
+        <div class="panel-heading" id="panelHeadSeven">
           <div class="square"></div>
           <div class="circle"></div>
           <h2 class="panel-title">
@@ -241,7 +244,7 @@
         </div>
       </div>
       <div class="panel panel-default">
-        <div class="panel-heading">
+        <div class="panel-heading" id="panelHeadEight">
           <div class="square"></div>
           <div class="circle"></div>
           <h2 class="panel-title">
@@ -259,7 +262,7 @@
         </div>
       </div>
       <div class="panel panel-default">
-        <div class="panel-heading">
+        <div class="panel-heading" id="panelHeadNine">
           <div class="square"></div>
           <div class="circle"></div>
           <h2 class="panel-title">
@@ -277,7 +280,7 @@
         </div>
       </div>
       <div class="panel panel-default final-section">
-        <div class="panel-heading">
+        <div class="panel-heading" id="panelHeadTen">
           <div class="square"></div>
           <div class="circle"></div>
           <h2 class="panel-title">
@@ -304,10 +307,22 @@
       if (this.$.collapseOne.className.match(/\bpanel-collapse collapse in\b/)) {
         this.$.collapseOne.className = "panel-collapse collapse";
         this.$.chevronOne.className = "chevron";
+        this.$.panelHeadOne.className = "panel-heading";
       }
       else {
         this.$.collapseOne.className = "panel-collapse collapse in";
         this.$.chevronOne.className = "chevron rotated";
+        this.$.panelHeadOne.className = "panel-heading latest";
+        // my sincere apologies for the state of this
+        this.$.panelHeadTwo.className = "panel-heading";
+        this.$.panelHeadThree.className = "panel-heading";
+        this.$.panelHeadFour.className = "panel-heading";
+        this.$.panelHeadFive.className = "panel-heading";
+        this.$.panelHeadSix.className = "panel-heading";
+        this.$.panelHeadSeven.className = "panel-heading";
+        this.$.panelHeadEight.className = "panel-heading";
+        this.$.panelHeadNine.className = "panel-heading";
+        this.$.panelHeadTen.className = "panel-heading";
       }
         
       },
@@ -317,10 +332,22 @@
       if (this.$.collapseTwo.className.match(/\bpanel-collapse collapse in\b/)) {
         this.$.collapseTwo.className = "panel-collapse collapse";
         this.$.chevronTwo.className = "chevron";
+        this.$.panelHeadTwo.className = "panel-heading";
       }
       else {
         this.$.collapseTwo.className = "panel-collapse collapse in";
         this.$.chevronTwo.className = "chevron rotated";
+        this.$.panelHeadTwo.className = "panel-heading latest";
+        // let the fun begin
+        this.$.panelHeadOne.className = "panel-heading";
+        this.$.panelHeadThree.className = "panel-heading";
+        this.$.panelHeadFour.className = "panel-heading";
+        this.$.panelHeadFive.className = "panel-heading";
+        this.$.panelHeadSix.className = "panel-heading";
+        this.$.panelHeadSeven.className = "panel-heading";
+        this.$.panelHeadEight.className = "panel-heading";
+        this.$.panelHeadNine.className = "panel-heading";
+        this.$.panelHeadTen.className = "panel-heading";
       }
         
       },
@@ -330,10 +357,22 @@
       if (this.$.collapseThree.className.match(/\bpanel-collapse collapse in\b/)) {
         this.$.collapseThree.className = "panel-collapse collapse";
         this.$.chevronThree.className = "chevron";
+        this.$.panelHeadThree.className = "panel-heading";
       }
       else {
         this.$.collapseThree.className = "panel-collapse collapse in";
         this.$.chevronThree.className = "chevron rotated";
+        this.$.panelHeadThree.className = "panel-heading latest";
+        // moar
+        this.$.panelHeadOne.className = "panel-heading";
+        this.$.panelHeadTwo.className = "panel-heading";
+        this.$.panelHeadFour.className = "panel-heading";
+        this.$.panelHeadFive.className = "panel-heading";
+        this.$.panelHeadSix.className = "panel-heading";
+        this.$.panelHeadSeven.className = "panel-heading";
+        this.$.panelHeadEight.className = "panel-heading";
+        this.$.panelHeadNine.className = "panel-heading";
+        this.$.panelHeadTen.className = "panel-heading";
       }
         
       },
@@ -343,10 +382,22 @@
       if (this.$.collapseFour.className.match(/\bpanel-collapse collapse in\b/)) {
         this.$.collapseFour.className = "panel-collapse collapse";
         this.$.chevronFour.className = "chevron";
+        this.$.panelHeadFour.className = "panel-heading";
       }
       else {
         this.$.collapseFour.className = "panel-collapse collapse in";
         this.$.chevronFour.className = "chevron rotated";
+        this.$.panelHeadFour.className = "panel-heading latest";
+        // moar
+        this.$.panelHeadOne.className = "panel-heading";
+        this.$.panelHeadTwo.className = "panel-heading";
+        this.$.panelHeadThree.className = "panel-heading";
+        this.$.panelHeadFive.className = "panel-heading";
+        this.$.panelHeadSix.className = "panel-heading";
+        this.$.panelHeadSeven.className = "panel-heading";
+        this.$.panelHeadEight.className = "panel-heading";
+        this.$.panelHeadNine.className = "panel-heading";
+        this.$.panelHeadTen.className = "panel-heading";
       }
         
       },
@@ -356,10 +407,22 @@
       if (this.$.collapseFive.className.match(/\bpanel-collapse collapse in\b/)) {
         this.$.collapseFive.className = "panel-collapse collapse";
         this.$.chevronFive.className = "chevron";
+        this.$.panelHeadFive.className = "panel-heading";
       }
       else {
         this.$.collapseFive.className = "panel-collapse collapse in";
         this.$.chevronFive.className = "chevron rotated";
+        this.$.panelHeadFive.className = "panel-heading latest";
+        // moar
+        this.$.panelHeadOne.className = "panel-heading";
+        this.$.panelHeadTwo.className = "panel-heading";
+        this.$.panelHeadThree.className = "panel-heading";
+        this.$.panelHeadFour.className = "panel-heading";
+        this.$.panelHeadSix.className = "panel-heading";
+        this.$.panelHeadSeven.className = "panel-heading";
+        this.$.panelHeadEight.className = "panel-heading";
+        this.$.panelHeadNine.className = "panel-heading";
+        this.$.panelHeadTen.className = "panel-heading";
       }
         
       },
@@ -369,10 +432,22 @@
       if (this.$.collapseSix.className.match(/\bpanel-collapse collapse in\b/)) {
         this.$.collapseSix.className = "panel-collapse collapse";
         this.$.chevronSix.className = "chevron";
+        this.$.panelHeadSix.className = "panel-heading";
       }
       else {
         this.$.collapseSix.className = "panel-collapse collapse in";
         this.$.chevronSix.className = "chevron rotated";
+        this.$.panelHeadSix.className = "panel-heading latest";
+        // moar
+        this.$.panelHeadOne.className = "panel-heading";
+        this.$.panelHeadTwo.className = "panel-heading";
+        this.$.panelHeadThree.className = "panel-heading";
+        this.$.panelHeadFour.className = "panel-heading";
+        this.$.panelHeadFive.className = "panel-heading";
+        this.$.panelHeadSeven.className = "panel-heading";
+        this.$.panelHeadEight.className = "panel-heading";
+        this.$.panelHeadNine.className = "panel-heading";
+        this.$.panelHeadTen.className = "panel-heading";
       }
         
       },
@@ -382,10 +457,22 @@
       if (this.$.collapseSeven.className.match(/\bpanel-collapse collapse in\b/)) {
         this.$.collapseSeven.className = "panel-collapse collapse";
         this.$.chevronSeven.className = "chevron";
+        this.$.panelHeadSeven.className = "panel-heading";
       }
       else {
         this.$.collapseSeven.className = "panel-collapse collapse in";
         this.$.chevronSeven.className = "chevron rotated";
+        this.$.panelHeadSeven.className = "panel-heading latest";
+        // moar
+        this.$.panelHeadOne.className = "panel-heading";
+        this.$.panelHeadTwo.className = "panel-heading";
+        this.$.panelHeadThree.className = "panel-heading";
+        this.$.panelHeadFour.className = "panel-heading";
+        this.$.panelHeadFive.className = "panel-heading";
+        this.$.panelHeadSix.className = "panel-heading";
+        this.$.panelHeadEight.className = "panel-heading";
+        this.$.panelHeadNine.className = "panel-heading";
+        this.$.panelHeadTen.className = "panel-heading";
       }
         
       },
@@ -395,10 +482,22 @@
       if (this.$.collapseEight.className.match(/\bpanel-collapse collapse in\b/)) {
         this.$.collapseEight.className = "panel-collapse collapse";
         this.$.chevronEight.className = "chevron";
+        this.$.panelHeadEight.className = "panel-heading";
       }
       else {
         this.$.collapseEight.className = "panel-collapse collapse in";
         this.$.chevronEight.className = "chevron rotated";
+        this.$.panelHeadEight.className = "panel-heading latest";
+        // moar
+        this.$.panelHeadOne.className = "panel-heading";
+        this.$.panelHeadTwo.className = "panel-heading";
+        this.$.panelHeadThree.className = "panel-heading";
+        this.$.panelHeadFour.className = "panel-heading";
+        this.$.panelHeadFive.className = "panel-heading";
+        this.$.panelHeadSix.className = "panel-heading";
+        this.$.panelHeadSeven.className = "panel-heading";
+        this.$.panelHeadNine.className = "panel-heading";
+        this.$.panelHeadTen.className = "panel-heading";
       }
         
       },
@@ -408,10 +507,22 @@
       if (this.$.collapseNine.className.match(/\bpanel-collapse collapse in\b/)) {
         this.$.collapseNine.className = "panel-collapse collapse";
         this.$.chevronNine.className = "chevron";
+        this.$.panelHeadNine.className = "panel-heading";
       }
       else {
         this.$.collapseNine.className = "panel-collapse collapse in";
         this.$.chevronNine.className = "chevron rotated";
+        this.$.panelHeadNine.className = "panel-heading latest";
+        // moar
+        this.$.panelHeadOne.className = "panel-heading";
+        this.$.panelHeadTwo.className = "panel-heading";
+        this.$.panelHeadThree.className = "panel-heading";
+        this.$.panelHeadFour.className = "panel-heading";
+        this.$.panelHeadFive.className = "panel-heading";
+        this.$.panelHeadSix.className = "panel-heading";
+        this.$.panelHeadSeven.className = "panel-heading";
+        this.$.panelHeadEight.className = "panel-heading";
+        this.$.panelHeadTen.className = "panel-heading";
       }
         
       },
@@ -421,10 +532,22 @@
       if (this.$.collapseTen.className.match(/\bpanel-collapse collapse in\b/)) {
         this.$.collapseTen.className = "panel-collapse collapse";
         this.$.chevronTen.className = "chevron";
+        this.$.panelHeadTen.className = "panel-heading";
       }
       else {
         this.$.collapseTen.className = "panel-collapse collapse in";
         this.$.chevronTen.className = "chevron rotated";
+        this.$.panelHeadTen.className = "panel-heading latest";
+        // moar
+        this.$.panelHeadOne.className = "panel-heading";
+        this.$.panelHeadTwo.className = "panel-heading";
+        this.$.panelHeadThree.className = "panel-heading";
+        this.$.panelHeadFour.className = "panel-heading";
+        this.$.panelHeadFive.className = "panel-heading";
+        this.$.panelHeadSix.className = "panel-heading";
+        this.$.panelHeadSeven.className = "panel-heading";
+        this.$.panelHeadEight.className = "panel-heading";
+        this.$.panelHeadNine.className = "panel-heading";
       }
         
       }
