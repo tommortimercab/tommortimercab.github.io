@@ -272,7 +272,7 @@
           <div class="circle"></div>
           <h2 class="panel-title" id="panelHeadTen" on-click="{{clickTen}}">
               <p class="chevron" id="chevronTen">&#58864;</p>
-              <content select="task-header10"></content>
+              <content select="task-header10" id="panelContentTen"></content>
           </h2>
           <p class="short-desc"><content select="task-short10"></content></p>
         </div>
@@ -313,7 +313,7 @@
         this.$.panelHeadNine.className = "panel-title";
         this.$.panelHeadTen.className = "panel-title";
       }
-      if ($('#panelHeadTen').is(':empty')){
+      if ($('#panelContentTen').is(':empty')){
         this.$.panelTen.className = "hidden";
       }
         
