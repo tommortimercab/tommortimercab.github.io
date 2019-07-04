@@ -128,7 +128,7 @@
           <div class="circle"></div>
           <h2 class="panel-title" id="panelHeadOne" on-click="{{clickOne}}">
               <p class="chevron" id="chevronOne">&#58864;</p>
-              <content select="task-header1"></content>
+              <content select="task-header1" id="panelContentOne"></content>
           </h2>
           <p class="short-desc"><content select="task-short1"></content></p>
         </div>
@@ -144,7 +144,7 @@
           <div class="circle"></div>
           <h2 class="panel-title" id="panelHeadTwo" on-click="{{clickTwo}}">
               <p class="chevron" id="chevronTwo">&#58864;</p>
-              <content select="task-header2"></content>
+              <content select="task-header2" id="panelContentTwo"></content>
           </h2>
           <p class="short-desc"><content select="task-short2"></content></p>
         </div>
@@ -160,7 +160,7 @@
           <div class="circle"></div>
           <h2 class="panel-title" id="panelHeadThree" on-click="{{clickThree}}">
               <p class="chevron" id="chevronThree">&#58864;</p>
-              <content select="task-header3"></content>
+              <content select="task-header3" id="panelContentThree"></content>
           </h2>
           <p class="short-desc"><content select="task-short3"></content></p>
         </div>
@@ -176,7 +176,7 @@
           <div class="circle"></div>
           <h2 class="panel-title" id="panelHeadFour" on-click="{{clickFour}}">
               <p class="chevron" id="chevronFour">&#58864;</p>
-              <content select="task-header4"></content>
+              <content select="task-header4" id="panelContentFour"></content>
           </h2>
           <p class="short-desc"><content select="task-short4"></content></p>
         </div>
@@ -192,7 +192,7 @@
           <div class="circle"></div>
           <h2 class="panel-title" id="panelHeadFive" on-click="{{clickFive}}">
               <p class="chevron" id="chevronFive">&#58864;</p>
-              <content select="task-header5"></content>
+              <content select="task-header5" id="panelContentFive"></content>
           </h2>
           <p class="short-desc"><content select="task-short5"></content></p>
         </div>
@@ -208,7 +208,7 @@
           <div class="circle"></div>
           <h2 class="panel-title" id="panelHeadSix" on-click="{{clickSix}}">
               <p class="chevron" id="chevronSix">&#58864;</p>
-              <content select="task-header6"></content>
+              <content select="task-header6" id="panelContentSix"></content>
           </h2>
           <p class="short-desc"><content select="task-short6"></content></p>
         </div>
@@ -224,7 +224,7 @@
           <div class="circle"></div>
           <h2 class="panel-title" id="panelHeadSeven" on-click="{{clickSeven}}">
               <p class="chevron" id="chevronSeven">&#58864;</p>
-              <content select="task-header7"></content>
+              <content select="task-header7" id="panelContentSeven"></content>
           </h2>
           <p class="short-desc"><content select="task-short7"></content></p>
         </div>
@@ -240,7 +240,7 @@
           <div class="circle"></div>
           <h2 class="panel-title" id="panelHeadEight" on-click="{{clickEight}}">
               <p class="chevron" id="chevronEight">&#58864;</p>
-              <content select="task-header8"></content>
+              <content select="task-header8" id="panelContentEight"></content>
           </h2>
           <p class="short-desc"><content select="task-short8"></content></p>
         </div>
@@ -256,7 +256,7 @@
           <div class="circle"></div>
           <h2 class="panel-title" id="panelHeadNine" on-click="{{clickNine}}">
               <p class="chevron" id="chevronNine">&#58864;</p>
-              <content select="task-header9"></content>
+              <content select="task-header9" id="panelContentNine"></content>
           </h2>
           <p class="short-desc"><content select="task-short9"></content></p>
         </div>
@@ -313,11 +313,66 @@
         this.$.panelHeadNine.className = "panel-title";
         this.$.panelHeadTen.className = "panel-title";
       }
+
+      if ($("#panelContentOne").text() == "") {
+        this.$.panelTen.className = "hidden";
+      }
+      else {
+        console.log("Task item 1 populated");
+      }
+      if ($("#panelContentTwo").text() == "") {
+        this.$.panelTen.className = "hidden";
+      }
+      else {
+        console.log("Task item 2 populated");
+      }
+      if ($("#panelContentThree").text() == "") {
+        this.$.panelTen.className = "hidden";
+      }
+      else {
+        console.log("Task item 3 populated");
+      }
+      if ($("#panelContentFour").text() == "") {
+        this.$.panelTen.className = "hidden";
+      }
+      else {
+        console.log("Task item 4 populated");
+      }
+      if ($("#panelContentFive").text() == "") {
+        this.$.panelTen.className = "hidden";
+      }
+      else {
+        console.log("Task item 5 populated");
+      }
+      if ($("#panelContentSix").text() == "") {
+        this.$.panelTen.className = "hidden";
+      }
+      else {
+        console.log("Task item 6 populated");
+      }
+      if ($("#panelContentSeven").text() == "") {
+        this.$.panelTen.className = "hidden";
+      }
+      else {
+        console.log("Task item 7 populated");
+      }
+      if ($("#panelContentEight").text() == "") {
+        this.$.panelTen.className = "hidden";
+      }
+      else {
+        console.log("Task item 8 populated");
+      }
+      if ($("#panelContentNine").text() == "") {
+        this.$.panelTen.className = "hidden";
+      }
+      else {
+        console.log("Task item 9 populated");
+      }
       if ($("#panelContentTen").text() == "") {
         this.$.panelTen.className = "hidden";
       }
       else {
-        console.log("nope");
+        console.log("Task item 10 populated");
       }
         
       },
