@@ -291,9 +291,9 @@
 
     Polymer({
       
-      doOnload: function() {
-      //remove any empty task items. this code is good when fired onclick, figuring out onload
-      if ($("task-header1").text() == "") {
+      ready: function(){
+   //remove any empty task items. this code is good when fired onclick, figuring out onload
+   if ($("task-header1").text() == "") {
         this.$.panelOne.className = "hidden";
       }
       else {
@@ -353,7 +353,8 @@
       else {
         console.log("Task item 10 populated");
       }
-    },
+  },
+
 
       clickOne: function() {
       
