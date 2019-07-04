@@ -121,7 +121,7 @@
         display:none!important;
       }
     </style>
-    <div class="panel-group" onLoad="{{doOnload}}">
+    <div class="panel-group">
       <div class="panel panel-default" id="panelOne">
         <div class="panel-heading">
           <div class="square"></div>
@@ -292,69 +292,68 @@
     Polymer({
       
       ready: function(){
-   //remove any empty task items. this code is good when fired onclick, figuring out onload
-   if ($("task-header1").text() == "") {
-        this.$.panelOne.className = "hidden";
-      }
-      else {
-        console.log("Task item 1 populated");
-      }
-      if ($("task-header2").text() == "") {
-        this.$.panelTwo.className = "hidden";
-      }
-      else {
-        console.log("Task item 2 populated");
-      }
-      if ($("task-header3").text() == "") {
-        this.$.panelThree.className = "hidden";
-      }
-      else {
-        console.log("Task item 3 populated");
-      }
-      if ($("task-header4").text() == "") {
-        this.$.panelFour.className = "hidden";
-      }
-      else {
-        console.log("Task item 4 populated");
-      }
-      if ($("task-header5").text() == "") {
-        this.$.panelFive.className = "hidden";
-      }
-      else {
-        console.log("Task item 5 populated");
-      }
-      if ($("task-header6").text() == "") {
-        this.$.panelSix.className = "hidden";
-      }
-      else {
-        console.log("Task item 6 populated");
-      }
-      if ($("task-header7").text() == "") {
-        this.$.panelSeven.className = "hidden";
-      }
-      else {
-        console.log("Task item 7 populated");
-      }
-      if ($("task-header8").text() == "") {
-        this.$.panelEight.className = "hidden";
-      }
-      else {
-        console.log("Task item 8 populated");
-      }
-      if ($("task-header9").text() == "") {
-        this.$.panelNine.className = "hidden";
-      }
-      else {
-        console.log("Task item 9 populated");
-      }
-      if ($("task-header10").text() == "") {
-        this.$.panelTen.className = "hidden";
-      }
-      else {
-        console.log("Task item 10 populated");
-      }
-  },
-
+          //hide any empty task items
+          if ($("task-header1").text() == "") {
+            this.$.panelOne.className = "hidden";
+          }
+          else {
+            console.log("Task item 1 populated");
+          }
+          if ($("task-header2").text() == "") {
+            this.$.panelTwo.className = "hidden";
+          }
+          else {
+            console.log("Task item 2 populated");
+          }
+          if ($("task-header3").text() == "") {
+            this.$.panelThree.className = "hidden";
+          }
+          else {
+            console.log("Task item 3 populated");
+          }
+          if ($("task-header4").text() == "") {
+            this.$.panelFour.className = "hidden";
+          }
+          else {
+            console.log("Task item 4 populated");
+          }
+          if ($("task-header5").text() == "") {
+            this.$.panelFive.className = "hidden";
+          }
+          else {
+            console.log("Task item 5 populated");
+          }
+          if ($("task-header6").text() == "") {
+            this.$.panelSix.className = "hidden";
+          }
+          else {
+            console.log("Task item 6 populated");
+          }
+          if ($("task-header7").text() == "") {
+            this.$.panelSeven.className = "hidden";
+          }
+          else {
+            console.log("Task item 7 populated");
+          }
+          if ($("task-header8").text() == "") {
+            this.$.panelEight.className = "hidden";
+          }
+          else {
+            console.log("Task item 8 populated");
+          }
+          if ($("task-header9").text() == "") {
+            this.$.panelNine.className = "hidden";
+          }
+          else {
+            console.log("Task item 9 populated");
+          }
+          if ($("task-header10").text() == "") {
+            this.$.panelTen.className = "hidden";
+          }
+          else {
+            console.log("Task item 10 populated");
+          }
+      },
 
       clickOne: function() {
       
