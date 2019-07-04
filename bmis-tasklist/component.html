@@ -121,7 +121,7 @@
         display:none!important;
       }
     </style>
-    <div class="panel-group" onload="validateEmpty()">
+    <div class="panel-group">
       <div class="panel panel-default" id="panelOne">
         <div class="panel-heading">
           <div class="square"></div>
@@ -285,9 +285,9 @@
     </div>
   </template>
   <script>
-    function validateEmpty (){
-      //remove any empty task items
-      if ($("task-header1").text() == "") {
+    window.addEventListener('WebComponentsReady', function(e) {
+//remove any empty task items
+if ($("task-header1").text() == "") {
         this.$.panelOne.className = "hidden";
       }
       else {
@@ -347,8 +347,10 @@
       else {
         console.log("Task item 10 populated");
       }
-    };
+});
+      
     
+
     Polymer({
 
       clickOne: function() {
