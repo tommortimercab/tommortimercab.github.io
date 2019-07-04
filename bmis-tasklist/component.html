@@ -121,7 +121,7 @@
         display:none!important;
       }
     </style>
-    <div class="panel-group">
+    <div class="panel-group" onload="{{doOnload}}">
       <div class="panel panel-default" id="panelOne">
         <div class="panel-heading">
           <div class="square"></div>
@@ -285,7 +285,13 @@
     </div>
   </template>
   <script>
-    window.addEventListener('WebComponentsReady', function(e) {
+    
+      
+    
+
+    Polymer({
+      
+      doOnload: function() {
       //remove any empty task items
       if ($("task-header1").text() == "") {
         this.$.panelOne.className = "hidden";
@@ -347,11 +353,7 @@
       else {
         console.log("Task item 10 populated");
       }
-    });
-      
-    
-
-    Polymer({
+    },
 
       clickOne: function() {
       
