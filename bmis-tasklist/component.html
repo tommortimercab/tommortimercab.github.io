@@ -286,8 +286,8 @@
   </template>
   <script>
     window.addEventListener('WebComponentsReady', function(e) {
-//remove any empty task items
-if ($("task-header1").text() == "") {
+      //remove any empty task items
+      if ($("task-header1").text() == "") {
         this.$.panelOne.className = "hidden";
       }
       else {
@@ -342,12 +342,12 @@ if ($("task-header1").text() == "") {
         console.log("Task item 9 populated");
       }
       if ($("task-header10").text() == "") {
-        document.getElementById("panelTen").className = "hidden";
+        this.$.panelTen.className = "hidden";
       }
       else {
         console.log("Task item 10 populated");
       }
-});
+    });
       
     
 
