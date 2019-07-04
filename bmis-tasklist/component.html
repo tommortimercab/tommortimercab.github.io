@@ -292,7 +292,7 @@
     Polymer({
       
       doOnload: function() {
-      //remove any empty task items
+      //remove any empty task items. this code is good when fired onclick, figuring out onload
       if ($("task-header1").text() == "") {
         this.$.panelOne.className = "hidden";
       }
