@@ -117,6 +117,9 @@
       .latest {
         background-color: #f2f8ff;
       }
+      .hidden {
+        display:none!important;
+      }
     </style>
     <div class="panel-group">
       <div class="panel panel-default" id="panelOne">
@@ -284,6 +287,8 @@
   <script>
     Polymer({
 
+      
+
       // todo: check if component content empty and hide station, tube line etc if so. demo has 10 so not doing yet.
  
       clickOne: function() {
@@ -307,6 +312,9 @@
         this.$.panelHeadEight.className = "panel-title";
         this.$.panelHeadNine.className = "panel-title";
         this.$.panelHeadTen.className = "panel-title";
+      }
+      if ($('#panelHeadTen').is(':empty')){
+        this.$.panelTen.className = "hidden";
       }
         
       },
