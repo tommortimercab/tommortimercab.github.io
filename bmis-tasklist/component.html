@@ -285,36 +285,8 @@
     </div>
   </template>
   <script>
-    Polymer({
-
-      
-
-      
- 
-      clickOne: function() {
-      
-      if (this.$.collapseOne.className.match(/\bpanel-collapse collapse in\b/)) {
-        this.$.collapseOne.className = "panel-collapse collapse";
-        this.$.chevronOne.className = "chevron";
-        this.$.panelHeadOne.className = "panel-title";
-      }
-      else {
-        this.$.collapseOne.className = "panel-collapse collapse in";
-        this.$.chevronOne.className = "chevron rotated";
-        this.$.panelHeadOne.className = "panel-title latest";
-        // my sincere apologies for the state of this
-        this.$.panelHeadTwo.className = "panel-title";
-        this.$.panelHeadThree.className = "panel-title";
-        this.$.panelHeadFour.className = "panel-title";
-        this.$.panelHeadFive.className = "panel-title";
-        this.$.panelHeadSix.className = "panel-title";
-        this.$.panelHeadSeven.className = "panel-title";
-        this.$.panelHeadEight.className = "panel-title";
-        this.$.panelHeadNine.className = "panel-title";
-        this.$.panelHeadTen.className = "panel-title";
-      }
-
-      // todo: check if component content empty and hide station, tube line etc if so. REMOVE IF NOT DONE FOR COF
+    $( document ).ready(function() {
+      //remove any empty task items
       if ($("task-header1").text() == "") {
         this.$.panelOne.className = "hidden";
       }
@@ -375,7 +347,31 @@
       else {
         console.log("Task item 10 populated");
       }
-      //end todo section
+    });
+    Polymer({
+
+      clickOne: function() {
+      
+      if (this.$.collapseOne.className.match(/\bpanel-collapse collapse in\b/)) {
+        this.$.collapseOne.className = "panel-collapse collapse";
+        this.$.chevronOne.className = "chevron";
+        this.$.panelHeadOne.className = "panel-title";
+      }
+      else {
+        this.$.collapseOne.className = "panel-collapse collapse in";
+        this.$.chevronOne.className = "chevron rotated";
+        this.$.panelHeadOne.className = "panel-title latest";
+        // my sincere apologies for the state of this
+        this.$.panelHeadTwo.className = "panel-title";
+        this.$.panelHeadThree.className = "panel-title";
+        this.$.panelHeadFour.className = "panel-title";
+        this.$.panelHeadFive.className = "panel-title";
+        this.$.panelHeadSix.className = "panel-title";
+        this.$.panelHeadSeven.className = "panel-title";
+        this.$.panelHeadEight.className = "panel-title";
+        this.$.panelHeadNine.className = "panel-title";
+        this.$.panelHeadTen.className = "panel-title";
+      }
         
       },
     
