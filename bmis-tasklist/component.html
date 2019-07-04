@@ -293,12 +293,31 @@
  
       clickOne: function() {
       
-     
+      if (this.$.collapseOne.className.match(/\bpanel-collapse collapse in\b/)) {
+        this.$.collapseOne.className = "panel-collapse collapse";
+        this.$.chevronOne.className = "chevron";
+        this.$.panelHeadOne.className = "panel-title";
+      }
+      else {
+        this.$.collapseOne.className = "panel-collapse collapse in";
+        this.$.chevronOne.className = "chevron rotated";
+        this.$.panelHeadOne.className = "panel-title latest";
+        // my sincere apologies for the state of this
+        this.$.panelHeadTwo.className = "panel-title";
+        this.$.panelHeadThree.className = "panel-title";
+        this.$.panelHeadFour.className = "panel-title";
+        this.$.panelHeadFive.className = "panel-title";
+        this.$.panelHeadSix.className = "panel-title";
+        this.$.panelHeadSeven.className = "panel-title";
+        this.$.panelHeadEight.className = "panel-title";
+        this.$.panelHeadNine.className = "panel-title";
+        this.$.panelHeadTen.className = "panel-title";
+      }
       if ($('#panelContentTen').is(':empty')){
         this.$.panelTen.className = "hidden";
       }
       else {
-        console.log("populated")
+        console.log("i cant let you do that dave")
       }
         
       },
