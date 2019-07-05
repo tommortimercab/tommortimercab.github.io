@@ -1,0 +1,651 @@
+<polymer-element name="task-list">
+  <template>
+    <style>
+      a {
+      text-decoration:none;
+      }
+      .panel-group {
+      margin-bottom: 20px;
+      font-family: "Open Sans", sans-serif;
+      width: 790px;
+      margin-top: 40px;
+      }
+      .panel-group .panel {
+      margin-bottom: 0;
+      border-radius: 4px;
+      clear: both;
+      }
+      .panel {
+      margin-bottom: 20px;
+      background-color: #fff;
+      border-radius: 4px;
+      }
+      h2.panel-title{
+        font-size: 28px;
+        font-size: 1.75rem;
+        line-height: 36px;
+        line-height: 2.25rem;
+        color: #004b88;
+        padding-right: 60px;
+        padding-left: 10px;
+      }
+      .panel-heading {
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 30px;
+      }
+      .panel-title {
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 16px;
+      color: inherit;
+      cursor: pointer;
+      margin-left:60px;
+      }
+      .panel-title>a {
+      color: inherit;
+      }
+      .collapse.in {
+      display: block;
+      }
+      .collapse {
+      display: none;
+      }
+      .panel-body {
+        padding-left: 21px;
+        border-left: 3px solid #004b88;
+        margin-left: 34px;
+      }
+      .panel-body p {
+        padding-bottom: 30px;
+        margin-top: -29px;
+        margin-left: 32px;
+        margin-bottom: 23px;
+      }
+      .chevron {
+        color: black;
+        transform: rotate(90deg);
+        float: right;
+        margin-top: 0;
+        font-size: 24px;
+        position:absolute;
+        margin-left:650px;
+        font-family:cab-icons!important;
+      }
+      .chevron.rotated {
+        transform: rotate(270deg);
+        margin-left:654px;
+      }
+      .circle {
+        float: left;
+        margin-top: -39px;
+        margin-left: -5px;
+        padding-right: 20px;
+        position: absolute;
+      }
+      .circle:before {
+        content: ' \25CF';
+        font-size: 70px;
+        color: #004b88;
+      }
+      .square {
+        width: 3px;
+        height: 234px;
+        background: #004b88;
+        position: absolute;
+        margin-left: 14px;
+        margin-top: 5px;
+      }
+      .square:last-of-type {
+        display:none;
+      }
+      .short-desc {
+        clear: both;
+        margin-left: 70px;
+        margin-top:18px;
+      }
+      .final-section .square {
+        display:none;
+      }
+      .final-section .panel-body {
+        border: none;
+      }
+      .latest {
+        background-color: #f2f8ff;
+      }
+      .hidden {
+        display:none!important;
+      }
+    </style>
+    <div class="panel-group">
+      <div class="panel panel-default" id="panelOne">
+        <div class="panel-heading">
+          <div class="square"></div>
+          <div class="circle"></div>
+          <h2 class="panel-title" id="panelHeadOne" on-click="{{clickOne}}">
+              <p class="chevron" id="chevronOne">&#58864;</p>
+              <content select="task-header1" id="panelContentOne"></content>
+          </h2>
+          <p class="short-desc"><content select="task-short1"></content></p>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse">
+          <div class="panel-body">
+            <p><content select="task-detail1"></content></p>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default" id="panelTwo">
+        <div class="panel-heading">
+          <div class="square"></div>
+          <div class="circle"></div>
+          <h2 class="panel-title" id="panelHeadTwo" on-click="{{clickTwo}}">
+              <p class="chevron" id="chevronTwo">&#58864;</p>
+              <content select="task-header2" id="panelContentTwo"></content>
+          </h2>
+          <p class="short-desc"><content select="task-short2"></content></p>
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse">
+          <div class="panel-body">
+            <p><content select="task-detail2"></content></p>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default" id="panelThree">
+        <div class="panel-heading">
+          <div class="square"></div>
+          <div class="circle"></div>
+          <h2 class="panel-title" id="panelHeadThree" on-click="{{clickThree}}">
+              <p class="chevron" id="chevronThree">&#58864;</p>
+              <content select="task-header3" id="panelContentThree"></content>
+          </h2>
+          <p class="short-desc"><content select="task-short3"></content></p>
+        </div>
+        <div id="collapseThree" class="panel-collapse collapse">
+          <div class="panel-body">
+            <p><content select="task-detail3"></content></p>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default" id="panelFour">
+        <div class="panel-heading">
+          <div class="square"></div>
+          <div class="circle"></div>
+          <h2 class="panel-title" id="panelHeadFour" on-click="{{clickFour}}">
+              <p class="chevron" id="chevronFour">&#58864;</p>
+              <content select="task-header4" id="panelContentFour"></content>
+          </h2>
+          <p class="short-desc"><content select="task-short4"></content></p>
+        </div>
+        <div id="collapseFour" class="panel-collapse collapse">
+          <div class="panel-body">
+            <p class="short-desc"><content select="task-detail4"></content></p>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default" id="panelFive">
+        <div class="panel-heading">
+          <div class="square"></div>
+          <div class="circle"></div>
+          <h2 class="panel-title" id="panelHeadFive" on-click="{{clickFive}}">
+              <p class="chevron" id="chevronFive">&#58864;</p>
+              <content select="task-header5" id="panelContentFive"></content>
+          </h2>
+          <p class="short-desc"><content select="task-short5"></content></p>
+        </div>
+        <div id="collapseFive" class="panel-collapse collapse">
+          <div class="panel-body">
+            <p><content select="task-detail5"></content></p>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default" id="panelSix">
+        <div class="panel-heading">
+          <div class="square"></div>
+          <div class="circle"></div>
+          <h2 class="panel-title" id="panelHeadSix" on-click="{{clickSix}}">
+              <p class="chevron" id="chevronSix">&#58864;</p>
+              <content select="task-header6" id="panelContentSix"></content>
+          </h2>
+          <p class="short-desc"><content select="task-short6"></content></p>
+        </div>
+        <div id="collapseSix" class="panel-collapse collapse">
+          <div class="panel-body">
+            <p><content select="task-detail6"></content></p>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default" id="panelSeven">
+        <div class="panel-heading">
+          <div class="square"></div>
+          <div class="circle"></div>
+          <h2 class="panel-title" id="panelHeadSeven" on-click="{{clickSeven}}">
+              <p class="chevron" id="chevronSeven">&#58864;</p>
+              <content select="task-header7" id="panelContentSeven"></content>
+          </h2>
+          <p class="short-desc"><content select="task-short7"></content></p>
+        </div>
+        <div id="collapseSeven" class="panel-collapse collapse">
+          <div class="panel-body">
+            <p><content select="task-detail7"></content></p>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default" id="panelEight">
+        <div class="panel-heading">
+          <div class="square"></div>
+          <div class="circle"></div>
+          <h2 class="panel-title" id="panelHeadEight" on-click="{{clickEight}}">
+              <p class="chevron" id="chevronEight">&#58864;</p>
+              <content select="task-header8" id="panelContentEight"></content>
+          </h2>
+          <p class="short-desc"><content select="task-short8"></content></p>
+        </div>
+        <div id="collapseEight" class="panel-collapse collapse">
+          <div class="panel-body">
+            <p><content select="task-detail8"></content></p>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default" id="panelNine">
+        <div class="panel-heading">
+          <div class="square"></div>
+          <div class="circle"></div>
+          <h2 class="panel-title" id="panelHeadNine" on-click="{{clickNine}}">
+              <p class="chevron" id="chevronNine">&#58864;</p>
+              <content select="task-header9" id="panelContentNine"></content>
+          </h2>
+          <p class="short-desc"><content select="task-short9"></content></p>
+        </div>
+        <div id="collapseNine" class="panel-collapse collapse">
+          <div class="panel-body">
+            <p><content select="task-detail9"></content></p>
+          </div>
+        </div>
+      </div>
+      <!-- if this is populated, it will always be the final section, so has hardcoded class final-section -->
+      <div class="panel panel-default final-section" id="panelTen">
+        <div class="panel-heading">
+          <div class="square"></div>
+          <div class="circle"></div>
+          <h2 class="panel-title" id="panelHeadTen" on-click="{{clickTen}}">
+              <p class="chevron" id="chevronTen">&#58864;</p>
+              <content select="task-header10" id="panelContentTen"></content>
+          </h2>
+          <p class="short-desc"><content select="task-short10"></content></p>
+        </div>
+        <div id="collapseTen" class="panel-collapse collapse">
+          <div class="panel-body">
+            <p><content select="task-detail10"></content></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script>
+    Polymer({
+      
+      ready: function(){
+          //hide any empty task items, and apply final-section class to last item
+          if ($("task-header1").text() == "") {
+            this.$.panelOne.className = "hidden";
+          }
+          else {
+            console.log("Task item 1 populated");
+          }
+          if ($("task-header2").text() == "") {
+            this.$.panelTwo.className = "hidden";
+            this.$.panelOne.classList.add("final-section");
+          }
+          else {
+            console.log("Task item 2 populated");
+          }
+          if ($("task-header3").text() == "") {
+            this.$.panelThree.className = "hidden";
+            this.$.panelTwo.classList.add("final-section");
+          }
+          else {
+            console.log("Task item 3 populated");
+          }
+          if ($("task-header4").text() == "") {
+            this.$.panelFour.className = "hidden";
+            this.$.panelThree.classList.add("final-section");
+          }
+          else {
+            console.log("Task item 4 populated");
+          }
+          if ($("task-header5").text() == "") {
+            this.$.panelFive.className = "hidden";
+            this.$.panelFour.classList.add("final-section");
+          }
+          else {
+            console.log("Task item 5 populated");
+          }
+          if ($("task-header6").text() == "") {
+            this.$.panelSix.className = "hidden";
+            this.$.panelFive.classList.add("final-section");
+          }
+          else {
+            console.log("Task item 6 populated");
+          }
+          if ($("task-header7").text() == "") {
+            this.$.panelSeven.className = "hidden";
+            this.$.panelSix.classList.add("final-section");
+          }
+          else {
+            console.log("Task item 7 populated");
+          }
+          if ($("task-header8").text() == "") {
+            this.$.panelEight.className = "hidden";
+            this.$.panelSeven.classList.add("final-section");
+          }
+          else {
+            console.log("Task item 8 populated");
+          }
+          if ($("task-header9").text() == "") {
+            this.$.panelNine.className = "hidden";
+            this.$.panelEight.classList.add("final-section");
+          }
+          else {
+            console.log("Task item 9 populated");
+          }
+          if ($("task-header10").text() == "") {
+            this.$.panelTen.className = "hidden";
+            this.$.panelNine.classList.add("final-section");
+          }
+          else {
+            console.log("Task item 10 populated");
+          }
+
+          //local storage demo
+          console.log(localStorage.item);
+          
+
+      },
+      //open accordion when clicked and highlight the most recently opened item
+      clickOne: function() {
+      
+      if (this.$.collapseOne.className.match(/\bpanel-collapse collapse in\b/)) {
+        this.$.collapseOne.className = "panel-collapse collapse";
+        this.$.chevronOne.className = "chevron";
+        this.$.panelHeadOne.className = "panel-title";
+      }
+      else {
+        //localstorage
+        localStorage.setItem("item", 1);
+        //end localstorage
+        this.$.collapseOne.className = "panel-collapse collapse in";
+        this.$.chevronOne.className = "chevron rotated";
+        this.$.panelHeadOne.className = "panel-title latest";
+        // my sincere apologies for the state of this
+        this.$.panelHeadTwo.className = "panel-title";
+        this.$.panelHeadThree.className = "panel-title";
+        this.$.panelHeadFour.className = "panel-title";
+        this.$.panelHeadFive.className = "panel-title";
+        this.$.panelHeadSix.className = "panel-title";
+        this.$.panelHeadSeven.className = "panel-title";
+        this.$.panelHeadEight.className = "panel-title";
+        this.$.panelHeadNine.className = "panel-title";
+        this.$.panelHeadTen.className = "panel-title";
+      }
+        
+      },
+    
+      clickTwo: function() {
+    
+      if (this.$.collapseTwo.className.match(/\bpanel-collapse collapse in\b/)) {
+        this.$.collapseTwo.className = "panel-collapse collapse";
+        this.$.chevronTwo.className = "chevron";
+        this.$.panelHeadTwo.className = "panel-title";
+      }
+      else {
+        //localstorage
+        localStorage.setItem("item", 2);
+        //end localstorage
+        this.$.collapseTwo.className = "panel-collapse collapse in";
+        this.$.chevronTwo.className = "chevron rotated";
+        this.$.panelHeadTwo.className = "panel-title latest";
+        // let the fun begin
+        this.$.panelHeadOne.className = "panel-title";
+        this.$.panelHeadThree.className = "panel-title";
+        this.$.panelHeadFour.className = "panel-title";
+        this.$.panelHeadFive.className = "panel-title";
+        this.$.panelHeadSix.className = "panel-title";
+        this.$.panelHeadSeven.className = "panel-title";
+        this.$.panelHeadEight.className = "panel-title";
+        this.$.panelHeadNine.className = "panel-title";
+        this.$.panelHeadTen.className = "panel-title";
+      }
+        
+      },
+    
+      clickThree: function() {
+    
+      if (this.$.collapseThree.className.match(/\bpanel-collapse collapse in\b/)) {
+        this.$.collapseThree.className = "panel-collapse collapse";
+        this.$.chevronThree.className = "chevron";
+        this.$.panelHeadThree.className = "panel-title";
+      }
+      else {
+        //localstorage
+        localStorage.setItem("item", 3);
+        //end localstorage
+        this.$.collapseThree.className = "panel-collapse collapse in";
+        this.$.chevronThree.className = "chevron rotated";
+        this.$.panelHeadThree.className = "panel-title latest";
+        // moar
+        this.$.panelHeadOne.className = "panel-title";
+        this.$.panelHeadTwo.className = "panel-title";
+        this.$.panelHeadFour.className = "panel-title";
+        this.$.panelHeadFive.className = "panel-title";
+        this.$.panelHeadSix.className = "panel-title";
+        this.$.panelHeadSeven.className = "panel-title";
+        this.$.panelHeadEight.className = "panel-title";
+        this.$.panelHeadNine.className = "panel-title";
+        this.$.panelHeadTen.className = "panel-title";
+      }
+        
+      },
+
+      clickFour: function() {
+    
+      if (this.$.collapseFour.className.match(/\bpanel-collapse collapse in\b/)) {
+        this.$.collapseFour.className = "panel-collapse collapse";
+        this.$.chevronFour.className = "chevron";
+        this.$.panelHeadFour.className = "panel-title";
+      }
+      else {
+        //localstorage
+        localStorage.setItem("item", 4);
+        //end localstorage
+        this.$.collapseFour.className = "panel-collapse collapse in";
+        this.$.chevronFour.className = "chevron rotated";
+        this.$.panelHeadFour.className = "panel-title latest";
+        // moar
+        this.$.panelHeadOne.className = "panel-title";
+        this.$.panelHeadTwo.className = "panel-title";
+        this.$.panelHeadThree.className = "panel-title";
+        this.$.panelHeadFive.className = "panel-title";
+        this.$.panelHeadSix.className = "panel-title";
+        this.$.panelHeadSeven.className = "panel-title";
+        this.$.panelHeadEight.className = "panel-title";
+        this.$.panelHeadNine.className = "panel-title";
+        this.$.panelHeadTen.className = "panel-title";
+      }
+        
+      },
+
+      clickFive: function() {
+      
+      if (this.$.collapseFive.className.match(/\bpanel-collapse collapse in\b/)) {
+        this.$.collapseFive.className = "panel-collapse collapse";
+        this.$.chevronFive.className = "chevron";
+        this.$.panelHeadFive.className = "panel-title";
+      }
+      else {
+        //localstorage
+        localStorage.setItem("item", 5);
+        //end localstorage
+        this.$.collapseFive.className = "panel-collapse collapse in";
+        this.$.chevronFive.className = "chevron rotated";
+        this.$.panelHeadFive.className = "panel-title latest";
+        // moar
+        this.$.panelHeadOne.className = "panel-title";
+        this.$.panelHeadTwo.className = "panel-title";
+        this.$.panelHeadThree.className = "panel-title";
+        this.$.panelHeadFour.className = "panel-title";
+        this.$.panelHeadSix.className = "panel-title";
+        this.$.panelHeadSeven.className = "panel-title";
+        this.$.panelHeadEight.className = "panel-title";
+        this.$.panelHeadNine.className = "panel-title";
+        this.$.panelHeadTen.className = "panel-title";
+      }
+        
+      },
+
+      clickSix: function() {
+      
+      if (this.$.collapseSix.className.match(/\bpanel-collapse collapse in\b/)) {
+        this.$.collapseSix.className = "panel-collapse collapse";
+        this.$.chevronSix.className = "chevron";
+        this.$.panelHeadSix.className = "panel-title";
+      }
+      else {
+        //localstorage
+        localStorage.setItem("item", 6);
+        //end localstorage
+        this.$.collapseSix.className = "panel-collapse collapse in";
+        this.$.chevronSix.className = "chevron rotated";
+        this.$.panelHeadSix.className = "panel-title latest";
+        // moar
+        this.$.panelHeadOne.className = "panel-title";
+        this.$.panelHeadTwo.className = "panel-title";
+        this.$.panelHeadThree.className = "panel-title";
+        this.$.panelHeadFour.className = "panel-title";
+        this.$.panelHeadFive.className = "panel-title";
+        this.$.panelHeadSeven.className = "panel-title";
+        this.$.panelHeadEight.className = "panel-title";
+        this.$.panelHeadNine.className = "panel-title";
+        this.$.panelHeadTen.className = "panel-title";
+      }
+        
+      },
+
+      clickSeven: function() {
+      
+      if (this.$.collapseSeven.className.match(/\bpanel-collapse collapse in\b/)) {
+        this.$.collapseSeven.className = "panel-collapse collapse";
+        this.$.chevronSeven.className = "chevron";
+        this.$.panelHeadSeven.className = "panel-title";
+      }
+      else {
+        //localstorage
+        localStorage.setItem("item", 7);
+        //end localstorage
+        this.$.collapseSeven.className = "panel-collapse collapse in";
+        this.$.chevronSeven.className = "chevron rotated";
+        this.$.panelHeadSeven.className = "panel-title latest";
+        // moar
+        this.$.panelHeadOne.className = "panel-title";
+        this.$.panelHeadTwo.className = "panel-title";
+        this.$.panelHeadThree.className = "panel-title";
+        this.$.panelHeadFour.className = "panel-title";
+        this.$.panelHeadFive.className = "panel-title";
+        this.$.panelHeadSix.className = "panel-title";
+        this.$.panelHeadEight.className = "panel-title";
+        this.$.panelHeadNine.className = "panel-title";
+        this.$.panelHeadTen.className = "panel-title";
+      }
+        
+      },
+
+      clickEight: function() {
+      
+      if (this.$.collapseEight.className.match(/\bpanel-collapse collapse in\b/)) {
+        this.$.collapseEight.className = "panel-collapse collapse";
+        this.$.chevronEight.className = "chevron";
+        this.$.panelHeadEight.className = "panel-title";
+      }
+      else {
+        //localstorage
+        localStorage.setItem("item", 8);
+        //end localstorage
+        this.$.collapseEight.className = "panel-collapse collapse in";
+        this.$.chevronEight.className = "chevron rotated";
+        this.$.panelHeadEight.className = "panel-title latest";
+        // moar
+        this.$.panelHeadOne.className = "panel-title";
+        this.$.panelHeadTwo.className = "panel-title";
+        this.$.panelHeadThree.className = "panel-title";
+        this.$.panelHeadFour.className = "panel-title";
+        this.$.panelHeadFive.className = "panel-title";
+        this.$.panelHeadSix.className = "panel-title";
+        this.$.panelHeadSeven.className = "panel-title";
+        this.$.panelHeadNine.className = "panel-title";
+        this.$.panelHeadTen.className = "panel-title";
+      }
+        
+      },
+
+      clickNine: function() {
+      
+      if (this.$.collapseNine.className.match(/\bpanel-collapse collapse in\b/)) {
+        this.$.collapseNine.className = "panel-collapse collapse";
+        this.$.chevronNine.className = "chevron";
+        this.$.panelHeadNine.className = "panel-title";
+      }
+      else {
+        //localstorage
+        localStorage.setItem("item", 9);
+        //end localstorage
+        this.$.collapseNine.className = "panel-collapse collapse in";
+        this.$.chevronNine.className = "chevron rotated";
+        this.$.panelHeadNine.className = "panel-title latest";
+        // moar
+        this.$.panelHeadOne.className = "panel-title";
+        this.$.panelHeadTwo.className = "panel-title";
+        this.$.panelHeadThree.className = "panel-title";
+        this.$.panelHeadFour.className = "panel-title";
+        this.$.panelHeadFive.className = "panel-title";
+        this.$.panelHeadSix.className = "panel-title";
+        this.$.panelHeadSeven.className = "panel-title";
+        this.$.panelHeadEight.className = "panel-title";
+        this.$.panelHeadTen.className = "panel-title";
+      }
+        
+      },
+
+      clickTen: function() {
+      
+      if (this.$.collapseTen.className.match(/\bpanel-collapse collapse in\b/)) {
+        this.$.collapseTen.className = "panel-collapse collapse";
+        this.$.chevronTen.className = "chevron";
+        this.$.panelHeadTen.className = "panel-title";
+      }
+      else {
+        //localstorage
+        localStorage.setItem("item", 10);
+        //end localstorage
+        this.$.collapseTen.className = "panel-collapse collapse in";
+        this.$.chevronTen.className = "chevron rotated";
+        this.$.panelHeadTen.className = "panel-title latest";
+        // moar
+        this.$.panelHeadOne.className = "panel-title";
+        this.$.panelHeadTwo.className = "panel-title";
+        this.$.panelHeadThree.className = "panel-title";
+        this.$.panelHeadFour.className = "panel-title";
+        this.$.panelHeadFive.className = "panel-title";
+        this.$.panelHeadSix.className = "panel-title";
+        this.$.panelHeadSeven.className = "panel-title";
+        this.$.panelHeadEight.className = "panel-title";
+        this.$.panelHeadNine.className = "panel-title";
+      }
+        
+      }
+    
+    });
+
+  </script>
+</polymer-element>
