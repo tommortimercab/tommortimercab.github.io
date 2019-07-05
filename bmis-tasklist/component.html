@@ -288,7 +288,7 @@
     Polymer({
       
       ready: function(){
-          //hide any empty task items
+          //hide any empty task items, and apply final-section class to last item
           if ($("task-header1").text() == "") {
             this.$.panelOne.className = "hidden";
           }
