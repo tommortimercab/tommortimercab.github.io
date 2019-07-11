@@ -36,3 +36,16 @@ i.icon-guillemet-right.side-nav__current__icon {
 .side-nav__ul--level1 {
     margin-left: -15px;
 }
+.index-page__box {
+    border: none;
+    border-bottom: 1px solid #dfdfdf;
+    width: 100%;
+    padding-left: 0;
+    padding-bottom: 30px;
+}
+.section-notice__content .badge {
+    background: #fcbb69;
+}
+.index-page__box:last-of-type {
+    border-bottom: none;
+}
