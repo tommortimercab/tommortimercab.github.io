@@ -1,10 +1,9 @@
-
 .main-content button b {
-    font-family: cab-icons!important;
+    font-family: cab-icons !important;
     color: white;
 }
 .main-content .page-info.info-reviewed {
-    display:none;
+    display: none;
 }
 i.icon-guillemet-right.side-nav__current__icon {
     margin-left: 10px;
@@ -14,7 +13,7 @@ i.icon-guillemet-right.side-nav__current__icon {
 }
 .icon-inbox:before {
     content: "\e618";
-    font-family: cab-icons!important;
+    font-family: cab-icons !important;
     font-style: normal;
     font-weight: 400;
     font-variant: normal;
@@ -36,4 +35,23 @@ i.icon-guillemet-right.side-nav__current__icon {
 }
 .side-nav__ul--level1 {
     margin-left: -15px;
+}
+.index-page__box {
+    border: none;
+    border-bottom: 1px solid #dfdfdf;
+    width: 100%;
+    padding-left: 0;
+    padding-bottom: 30px;
+}
+.section-notice__content .badge {
+    background: #fcbb69;
+    border-radius: 2px;
+}
+.index-page__box:last-of-type {
+    border-bottom: none;
+}
+@media(min-width:768px) {
+    .title {
+        width: 39rem;
+    }
 }
