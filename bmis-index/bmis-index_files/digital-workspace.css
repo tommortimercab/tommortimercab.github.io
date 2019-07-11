@@ -1,0 +1,38 @@
+.main-content button b {
+    font-family: cab-icons !important;
+    color: white;
+}
+.main-content .page-info.info-reviewed {
+    display: none;
+}
+i.icon-guillemet-right.side-nav__current__icon {
+    margin-left: 10px;
+}
+.type-icon {
+    margin-bottom: 6px;
+}
+.icon-inbox:before {
+    content: "\e618";
+    font-family: cab-icons !important;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+.footer-feedback__content.c-footer-feedback__body {
+    border-top: 1px solid #eee;
+}
+.side-nav__current {
+    color: #004b88;
+    text-decoration: none;
+    background-color: #e3f4ff;
+    border-radius: 2px;
+}
+.icon-guillemet-right.side-nav__current__icon {
+    display: none;
+}
+.side-nav__ul--level1 {
+    margin-left: -15px;
+}
