@@ -45,6 +45,7 @@ i.icon-guillemet-right.side-nav__current__icon {
 }
 .section-notice__content .badge {
     background: #fcbb69;
+    border-radius: 2px;
 }
 .index-page__box:last-of-type {
     border-bottom: none;
