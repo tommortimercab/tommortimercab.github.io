@@ -123,7 +123,7 @@
 		}
 	})();
 	</script>
-		<svg class="loader" viewBox="0 0 24 24">
+		<svg class="loader" id="loader" viewBox="0 0 24 24">
 		  <circle class="loader__value" cx="12" cy="12" r="10" />
 		  <circle class="loader__value" cx="12" cy="12" r="10" />
 		  <circle class="loader__value" cx="12" cy="12" r="10" />
@@ -173,6 +173,7 @@
 			// Create new runtime using the c2canvas 
 			cr_createRuntime("c2canvas");
 			$("#c2canvasdiv").hide(0).delay(5000).show(0);
+			$("#loader").show(0).delay(5000).hide(0);
 		});
 		
 		// Pause and resume on page becoming visible/invisible
