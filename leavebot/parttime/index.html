@@ -18,7 +18,6 @@
 		}
 
 		body {
-		  align-items: center;
 		  display: flex;
 		  justify-content: center;
 		}
@@ -123,14 +122,16 @@
 		}
 	})();
 	</script>
-		<svg class="loader" viewBox="0 0 24 24">
-		  <circle class="loader__value" cx="12" cy="12" r="10" />
-		  <circle class="loader__value" cx="12" cy="12" r="10" />
-		  <circle class="loader__value" cx="12" cy="12" r="10" />
-		  <circle class="loader__value" cx="12" cy="12" r="10" />
-		  <circle class="loader__value" cx="12" cy="12" r="10" />
-		  <circle class="loader__value" cx="12" cy="12" r="10" />
-		</svg>
+		<div id="loader">
+			<svg class="loader"viewBox="0 0 24 24">
+				<circle class="loader__value" cx="12" cy="12" r="10" />
+				<circle class="loader__value" cx="12" cy="12" r="10" />
+				<circle class="loader__value" cx="12" cy="12" r="10" />
+				<circle class="loader__value" cx="12" cy="12" r="10" />
+				<circle class="loader__value" cx="12" cy="12" r="10" />
+				<circle class="loader__value" cx="12" cy="12" r="10" />
+			</svg>
+		</div>
 		<!-- The canvas must be inside a div called c2canvasdiv -->
 		<div id="c2canvasdiv" style="margin: 0 auto; width: 950px; height: 1200px;">
 		
@@ -173,6 +174,7 @@
 			// Create new runtime using the c2canvas 
 			cr_createRuntime("c2canvas");
 			$("#c2canvasdiv").hide(0).delay(5000).show(0);
+			$("#loader").show(0).delay(5000).hide(0);
 		});
 		
 		// Pause and resume on page becoming visible/invisible
