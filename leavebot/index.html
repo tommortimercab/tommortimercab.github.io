@@ -11,65 +11,99 @@
 	
 	<title>Leave calculator</title>
 	<!-- Note: running this exported project from disk may not work exactly like preview, since browsers block some features on the file:// protocol.  Once you've uploaded it to a server, it should work OK. -->
-	
-    <!-- This outlines the canvas with a black border and makes the page background black. -->
 	<style type="text/css">
-		body { background-color: white; color: white; }
-		canvas { -ms-touch-action: none; }
-		
-		.spinner {
-		  position: relative;
-		  box-sizing: border-box;
-		  background-clip: padding-box;
-		  width: 200px;
-		  height: 200px;
-		  border-radius: 100px;
-		  border: 4px solid rgba(255, 255, 255, 0.1);
-		  -webkit-mask: linear-gradient(rgba(0, 0, 0, 0.1), #000000 90%);
-		  transform-origin: 50% 60%;
-		  transform: perspective(200px) rotateX(66deg);
-		  animation: spinner-wiggle 1.2s infinite;
-		}
-		.spinner:before,
-		.spinner:after {
-		  content: "";
-		  position: absolute;
-		  margin: -4px;
-		  box-sizing: inherit;
-		  width: inherit;
-		  height: inherit;
-		  border-radius: inherit;
-		  opacity: .05;
-		  border: inherit;
-		  border-color: transparent;
-		  animation: spinner-spin 1.2s cubic-bezier(0.6, 0.2, 0, 0.8) infinite, spinner-fade 1.2s linear infinite;
+		html,
+		body {
+		  height: 100%;
 		}
 
-		.spinner:before {
-		  border-top-color: #004b88;
+		body {
+		  align-items: center;
+		  display: flex;
+		  justify-content: center;
 		}
 
-		.spinner:after {
-		  border-top-color: #fcbb69;
-		  animation-delay: 0.3s;
+		.loader {
+		  -webkit-animation: loader-turn 1s linear infinite;
+		          animation: loader-turn 1s linear infinite;
+		  padding: 1rem;
+		  max-width: 60px;
+		  width: 100%;
 		}
-
-		@keyframes spinner-spin {
+		@-webkit-keyframes loader-turn {
+		  50% {
+		    -webkit-transform: rotate(180deg);
+		            transform: rotate(180deg);
+		  }
 		  100% {
-			transform: rotate(360deg);
+		    -webkit-transform: rotate(720deg);
+		            transform: rotate(720deg);
 		  }
 		}
-		@keyframes spinner-fade {
-		  20% {
-			opacity: .1;
+		@keyframes loader-turn {
+		  50% {
+		    -webkit-transform: rotate(180deg);
+		            transform: rotate(180deg);
 		  }
-		  40% {
-			opacity: 1;
-		  }
-		  60% {
-			opacity: .1;
+		  100% {
+		    -webkit-transform: rotate(720deg);
+		            transform: rotate(720deg);
 		  }
 		}
+		.loader__value {
+		  -webkit-animation: loader-stroke 6s linear infinite;
+		          animation: loader-stroke 6s linear infinite;
+		  fill: none;
+		  stroke-dasharray: 63;
+		  stroke-dashoffset: 63;
+		  stroke-linecap: round;
+		  stroke-width: 4;
+		}
+		.loader__value:nth-child(1) {
+		  stroke: #004b88;
+		}
+		.loader__value:nth-child(2) {
+		  stroke: #b5afd7;
+		  -webkit-animation-delay: 1s;
+		          animation-delay: 1s;
+		}
+		.loader__value:nth-child(3) {
+		  stroke: #006278;
+		  -webkit-animation-delay: 2s;
+		          animation-delay: 2s;
+		}
+		.loader__value:nth-child(4) {
+		  stroke: #fcbb69;
+		  -webkit-animation-delay: 3s;
+		          animation-delay: 3s;
+		}
+		.loader__value:nth-child(5) {
+		  stroke: #b2c9db;
+		  -webkit-animation-delay: 4s;
+		          animation-delay: 4s;
+		}
+		.loader__value:nth-child(6) {
+		  stroke: #004b88;
+		  -webkit-animation-delay: 5s;
+		          animation-delay: 5s;
+		}
+		@-webkit-keyframes loader-stroke {
+		  8.3333333333% {
+		    stroke-dashoffset: 0;
+		  }
+		  16.6666666667%, 100% {
+		    stroke-dashoffset: 63;
+		  }
+		}
+		@keyframes loader-stroke {
+		  8.3333333333% {
+		    stroke-dashoffset: 0;
+		  }
+		  16.6666666667%, 100% {
+		    stroke-dashoffset: 63;
+		  }
+		}
+
 	</style>
 
 
@@ -89,7 +123,14 @@
 		}
 	})();
 	</script>
-		<div id="loading" class="spinner"></div>
+		<svg class="loader" viewBox="0 0 24 24">
+		  <circle class="loader__value" cx="12" cy="12" r="10" />
+		  <circle class="loader__value" cx="12" cy="12" r="10" />
+		  <circle class="loader__value" cx="12" cy="12" r="10" />
+		  <circle class="loader__value" cx="12" cy="12" r="10" />
+		  <circle class="loader__value" cx="12" cy="12" r="10" />
+		  <circle class="loader__value" cx="12" cy="12" r="10" />
+		</svg>
 		<!-- The canvas must be inside a div called c2canvasdiv -->
 		<div id="c2canvasdiv" style="margin: 0 auto; width: 950px; height: 1200px;">
 		
@@ -129,10 +170,9 @@
 		// Start the project running on window load.
 		jQuery(document).ready(function ()
 		{
-			// Create new runtime using the c2canvas and show load screen
+			// Create new runtime using the c2canvas 
 			cr_createRuntime("c2canvas");
 			$("#c2canvasdiv").hide(0).delay(5000).show(0);
-			$("#loading").delay(5000).hide(0);
 		});
 		
 		// Pause and resume on page becoming visible/invisible
