@@ -1,0 +1,100 @@
+body {
+    background:#f2f8ff;
+}
+.mainContainer {
+    width: 1200px;
+    height: 610px;
+    background: url("DW-selector.png");
+    background-size: contain;
+    margin: 0 auto;
+}
+h1 {
+    position: absolute;
+    margin-left: 198px;
+    margin-top: 19px;
+    font-size: 30px;
+}
+h2 {
+    font-size: 23.5px;
+}
+p {
+    color: #004b88;
+    font-size: 13.4px;
+    line-height: 20px;
+}
+button {
+    font-size: 13.4px;
+    padding: 3px 7px 9px 0px;
+    margin-top: -11px;
+}
+span {
+    margin-top: 8px;
+    float: left;
+    margin-left: 12px;
+}
+.chevron {
+    margin-top: 8px;
+    margin-left: 4px;
+    width: 9px;
+}
+#workplace {
+    position: absolute;
+    margin-top: 426px;
+    margin-left: 231px;
+    border-bottom:none;
+}
+#rollout {
+    position: absolute;
+    margin-top: 477px;
+    margin-left: 231px;
+    border-bottom: none;
+}
+#intranet {
+    position: absolute;
+    margin-top: 426px;
+    margin-left: 659px;
+    border-bottom: none;
+}
+.leftCol h2 {
+    position: absolute;
+    margin-left: 230px;
+    margin-top: 299px;
+}
+.rightCol h2 {
+    margin-left: 658px;
+    position: absolute;
+    margin-top: 299px;
+}
+#workplaceImg {
+    position: absolute;
+    width: 184px;
+    margin-left: 304px;
+    margin-top: 106px;
+}
+#intranetImg {
+    width: 201px;
+    position: absolute;
+    margin-left: 713px;
+    margin-top: 100px;
+}
+.leftCol p {
+    margin-left: 230px;
+    margin-top: 339px;
+    position: absolute;  
+    width: 319px;   
+}
+.rightCol p {
+    margin-left: 658px;
+    margin-top: 339px;
+    position: absolute;  
+    width: 319px;   
+}
+footer {
+    position: absolute;
+    margin-top: 557px;
+    margin-left: 430px;
+}
+footer a {
+    font-size: 13.3px;
+    font-weight: bold;
+}
