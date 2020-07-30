@@ -50,8 +50,19 @@ i.icon-guillemet-right.side-nav__current__icon {
 .index-page__box:last-of-type {
     border-bottom: none;
 }
+a button + img {
+    display:none;
+}
 @media(min-width:980px) {
     .title, .articleContent {
         width: 39rem;
     }
 }
+
+/* NOTICES - THESE MUST BE ADDED TO BMIS-TASKLIST, BMIS-TASKLIST-LOCALSTORAGE AND BMIS-INDEX REPOS WHEN COMPLETE! */
+
+/* REMOVE BEFORE DEV03 - FONT HACK FOR LOCAL/GITHUB */
+.callout--warning:before, .dap-panel--crucial:before, .highlight--error:before {
+    font-family: open sans,cab-icons;
+}
+
