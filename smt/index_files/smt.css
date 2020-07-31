@@ -1,0 +1,16 @@
+.smart--meter h1 {
+    color: black;
+}
+.form--wrapper.o-grid__unit--m-1-1.o-grid__unit--d-1-2 {
+    border-top: 4px solid #004291;
+    padding-top: 32px;
+}
+.intro--section.o-grid__unit--m-1-1.o-grid__unit--d-1-2 {
+    padding-bottom: 17px;
+}
+#RootPlaceHolder_RootPlaceHolder_TxtMPxn {
+    width: 288px;
+}
+#RootPlaceHolder_RootPlaceHolder_TxtPostcode {
+    width: 288px;
+}
