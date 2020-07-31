@@ -13,4 +13,21 @@
 }
 #RootPlaceHolder_RootPlaceHolder_TxtPostcode {
     width: 288px;
+    max-width: 288px!important;
+}
+#RootPlaceHolder_RootPlaceHolder_LblTnC {
+    font-weight: normal;
+}
+#RootPlaceHolder_RootPlaceHolder_ChkTnC {
+    float: left;
+    margin-top: 5px;
+    width: 44px;
+    height: 44px;
+}
+#RootPlaceHolder_RootPlaceHolder_BtnSubmit {
+    background: #018176;
+    color:white;
+    border:none;
+    margin-top:15px;
+    width: 195px;
 }
