@@ -54,12 +54,8 @@
 .meter--details dt {
     font-weight: bold;
 }
-.meter--other {
-    border: 2px solid #004291;
-}
 #RootPlaceHolder_RootPlaceHolder_PnlOtherMeter {
     margin-top: 40px;
-    padding: 16px;
 }
 #RootPlaceHolder_RootPlaceHolder_PnlOtherMeter h3 {
     margin-top:0;
