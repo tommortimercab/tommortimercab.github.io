@@ -1,4 +1,4 @@
-.smart--meter h1 {
+.smart--meter h1, .meter--details h1, .meter--details h2, .meter--other h2, .meter--info h2, .meter--info h3, .meter--other h3 {
     color: black;
 }
 .form--wrapper.o-grid__unit--m-1-1.o-grid__unit--d-1-2 {
@@ -30,4 +30,30 @@
     border:none;
     margin-top:15px;
     width: 195px;
+}
+#RootPlaceHolder_RootPlaceHolder_BtnFindSupplier {
+    background: #018176;
+    color:white;
+    border:none;
+    margin-top:0px;
+    margin-bottom: 15px;
+}
+#RootPlaceHolder_RootPlaceHolder_LblDetailsCorrect {
+    color: #4A4E4F;
+}
+.meter--details dl {
+    background: #e6f3e5;
+    border-left: 4px solid #0A8600;
+    padding: 16px;
+    padding-bottom: 0;
+}
+.meter--details dd {
+    margin-inline-start: 0;
+    padding-bottom: 16px;
+}
+.meter--details dt {
+    font-weight: bold;
+}
+.meter--other {
+    border: 2px solid #004291;
 }
