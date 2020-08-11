@@ -71,14 +71,21 @@
 }
 .list-style-none li {
     border-bottom: 1px solid #D7D7D7;
-    padding-top: 10px;
+    padding-top: 2px;
     padding-bottom: 10px;
 }
 .letter-separator {
     background: #f2f2f2;
     padding: 8px;
     padding: 0.5rem;
-    border-radius: 5px;
+    padding-top:9px!important;
+    margin-top: -9px;
     font-weight: bold;
-    border-bottom:none;
+    border-bottom:none!important;
+}
+.supplier {
+    padding-left:8px;
+}
+.supplier:last-of-type {
+    border-bottom: none;
 }
