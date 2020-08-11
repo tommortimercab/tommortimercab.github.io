@@ -1,0 +1,241 @@
+/* INITIAL STYLESHEET */
+
+.main-content button b {
+    font-family: cab-icons !important;
+    color: white;
+}
+
+.main-content .page-info.info-reviewed {
+    display: none;
+}
+
+i.icon-guillemet-right.side-nav__current__icon {
+    margin-left: 10px;
+}
+
+.type-icon {
+    margin-bottom: 6px;
+}
+
+.icon-inbox:before {
+    content: "\e618";
+    font-family: cab-icons !important;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+.footer-feedback__content.c-footer-feedback__body {
+    border-top: 1px solid #eee;
+}
+
+.side-nav__current {
+    color: #004b88;
+    text-decoration: none;
+    background-color: #e3f4ff;
+    border-radius: 2px;
+}
+
+.icon-guillemet-right.side-nav__current__icon {
+    display: none;
+}
+
+.side-nav__ul--level1 {
+    margin-left: -15px;
+}
+
+.index-page__box {
+    border: none;
+    border-bottom: 1px solid #dfdfdf;
+    width: 100%;
+    padding-left: 0;
+    padding-bottom: 30px;
+}
+
+.section-notice__content .badge {
+    background: #fcbb69;
+    border-radius: 2px;
+}
+
+.index-page__box:last-of-type {
+    border-bottom: none;
+}
+
+a button + img {
+    display: none;
+}
+
+@media(min-width:980px) {
+    .title, .articleContent {
+        width: 39em;
+    }
+}
+
+/* NOTICES */
+
+/* REMOVE BEFORE DEV03 - FONT HACK FOR LOCAL/GITHUB */
+/*.callout--warning:before, .dap-panel--crucial:before, .highlight--error:before {
+    font-family: open sans,cab-icons;
+}*/
+
+.callout--warning {
+    border-width: 0;
+    border-left-width: 7px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-right: 13px;
+}
+
+    .callout--warning:before {
+        font-size: 1rem;
+        font-weight: bold;
+        content: "Important";
+        color: #000;
+        background: #fae1e1;
+        margin-bottom: 0;
+        width: 0;
+        margin-top: -11px;
+        padding-bottom: 6px;
+    }
+
+.callout--alert {
+    padding-left: 12px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 13px;
+    border-left-width: 7px;
+}
+
+.callout--quote {
+    border-width: 0;
+    border-left-width: 7px;
+    padding-left: 12px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 8px;
+}
+
+/*CLOSURE BUTTONS */
+
+.button-closure {
+    background-color: #fff;
+    -webkit-box-shadow: inset 0 0 0 0.125rem #81cec6;
+    box-shadow: inset 0 0 0 0.125rem #81cec6;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: .125rem;
+    border: none;
+    color: #004b88;
+    cursor: pointer;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    font-family: 'Open Sans', helvetica, 'helvetica neue', arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    outline: none;
+    padding: .75rem 1rem;
+}
+
+    .button-closure:hover {
+        background-color: #eaf9f7;
+        -webkit-box-shadow: inset 0 0 0 0.125rem #5cc0b5;
+        box-shadow: inset 0 0 0 0.125rem #5cc0b5;
+        border: none;
+    }
+
+    .button-closure b {
+        color: #9F9F9F !important;
+    }
+/* TABLE COLUMN WIDTH EQUALISER */
+
+table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+td {
+    width: 25%;
+}
+
+/* REMOVE BORDER ON IMAGES */
+.articleContent img {
+    border: none;
+}
+
+/* FLOATING SIDENAV - MAGIC NUMBERS GALORE */
+/* 1080P */
+@media (min-width: 1920px) {
+    .main-content__sidebar.side-nav.fix-nav {
+        position: fixed;
+        width: 18%;
+        right: 22.8%;
+        top: 0;
+        background: #fff;
+    }
+}
+/* RETINA TO 1080P - NEEDS FURTHER TESTING */
+@media (min-width: 1680px) and (max-width: 1919px) {
+    .main-content__sidebar.side-nav.fix-nav {
+        position: fixed;
+        width: 21%;
+        right: 18.6%;
+        top: 0;
+        background: #fff;
+    }
+}
+/* RESPONSIVE DESKTOP */
+@media(min-width:1037px) and (max-width:1679px) {
+    .main-content__sidebar.side-nav.fix-nav {
+        position: fixed;
+        top: 0;
+        background: #fff;
+        width: 349.33px;
+    }
+}
+/* ONCE THE CONTENT HITS OUTSIDE EDGES */
+@media(min-width:751px) and (max-width:1036px) {
+    .main-content__sidebar.side-nav.fix-nav {
+        position: fixed;
+        width: 32%;
+        right: 1.9%;
+        top: 0;
+        background: #fff;
+        padding-right: 3%;
+    }
+}
+
+/* TASKLIST SIDENAV */
+
+.c-tasklist__item:before {
+    border-left-width: 2px;
+}
+
+.c-tasklist__item--current:after {
+    width: 14px;
+    height: 14px;
+    top: 31%;
+}
+
+.c-tasklist {
+    padding-left: 13px !important;
+}
+
+.c-tasklist__item:last-child:before {
+    height: 44%;
+}
+
+.side-nav__ul--level3.c-tasklist li a {
+    margin-left: -15px;
+    padding: 0.3rem 2.75rem;
+}
+
+.side-nav__ul--level3.c-tasklist li a:visited {
+    color: #53388d;
+    border-bottom-color: #53388d;
+}
