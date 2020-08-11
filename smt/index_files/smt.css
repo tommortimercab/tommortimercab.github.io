@@ -1,6 +1,9 @@
 .smart--meter h1, .meter--details h1, .meter--details h2, .meter--other h2, .meter--info h2, .meter--info h3, .meter--other h3, .supplier--info h1, .supplier--info h2, .supplier--list h2, .supplier--list h3 {
     color: black;
 }
+.supplier--list h2 {
+    padding-bottom: 8px;
+}
 .form--wrapper.o-grid__unit--m-1-1.o-grid__unit--d-1-2 {
     border-top: 4px solid #004291;
     padding-top: 32px;
