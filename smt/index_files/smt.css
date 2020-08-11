@@ -1,4 +1,4 @@
-.smart--meter h1, .meter--details h1, .meter--details h2, .meter--other h2, .meter--info h2, .meter--info h3, .meter--other h3 {
+.smart--meter h1, .meter--details h1, .meter--details h2, .meter--other h2, .meter--info h2, .meter--info h3, .meter--other h3, .supplier--info h1, .supplier--info h2, .supplier--list h2, .supplier--list h3 {
     color: black;
 }
 .form--wrapper.o-grid__unit--m-1-1.o-grid__unit--d-1-2 {
@@ -64,4 +64,21 @@
     color: black;
     background: white;
     border: 2px solid #007A7C;
+}
+.list-style-none {
+    list-style: none;
+    padding-left:0;
+}
+.list-style-none li {
+    border-bottom: 1px solid #D7D7D7;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.letter-separator {
+    background: #f2f2f2;
+    padding: 8px;
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    border-bottom:none;
 }
