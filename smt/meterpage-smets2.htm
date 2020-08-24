@@ -1,0 +1,1443 @@
+<!DOCTYPE html>
+<!-- saved from url=(0086)https://epidev03.citizensadvice.org.uk/development/test-tools/smartmeter-checker-tool/ -->
+<html class="js hide-cookie-monster" lang="en-GB"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>template {display: none !important;} /* injected by platform.js */</style><style>body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+</style><style shim-shadowdom-css="">style { display: none !important; }
+</style>
+
+<script type="text/javascript" async="" src="./meterpage-smets2_files/analytics.js"></script><script async="" src="./meterpage-smets2_files/gtm.js"></script><script type="text/javascript" async="async" src="./meterpage-smets2_files/le-mtagconfig.js"></script>
+<script type="text/javascript" async="async" src="./meterpage-smets2_files/lp-gatracking.js"></script>
+
+
+
+<script>
+    dataLayer = [{'GUID':'40c6ba0c-4a8c-4b8a-8905-cdf279292b7d','pageTemplate':'SmartMeterCheckerToolPage','userRole':'ANONYMOUS','public':'True','language':'England','extent':''}];
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window, document, 'script', 'dataLayer', 'GTM-T5MB575');</script>
+<!-- End Google Tag Manager -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>
+	Check your smart meter - Citizens Advice
+</title><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2.0"><meta name="cab-guid" content="40c6ba0c-4a8c-4b8a-8905-cdf279292b7d"><meta name="cab-title" content="Check your smart meter">
+
+<meta property="og:url" content="http://epidev03.citizensadvice.org.uk/development/test-tools/smartmeter-checker-tool/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Check your smart meter">
+<meta property="og:description" content="">
+<meta property="og:image" content="http://epidev03.citizensadvice.org.uk/Images/Public/socialmedia/CA.png">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@CitizensAdvice">
+<meta name="twitter:title" content="Check your smart meter">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="http://epidev03.citizensadvice.org.uk/Images/Public/socialmedia/CA.png">
+<meta name="msvalidate.01" content="B53C5C20449FC2233D3862B4DBEDFA3E"><link rel="canonical" href="https://epidev03.citizensadvice.org.uk/development/test-tools/smartmeter-checker-tool/"><link rel="stylesheet" href="./meterpage-smets2_files/site.css">
+        <link rel="stylesheet" href="./meterpage-smets2_files/cads.system.css">
+        <link rel="stylesheet" href="./meterpage-smets2_files/digital-workspace.css">
+        <style shim-shadowdom-css="">/*******************************
+          Flex Layout
+*******************************/
+
+html   [layout][horizontal], html   [layout][vertical] {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+html   [layout][horizontal][inline], html   [layout][vertical][inline] {
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+}
+
+html   [layout][horizontal] {
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+}
+
+html   [layout][horizontal][reverse] {
+  -ms-flex-direction: row-reverse;
+  -webkit-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+html   [layout][vertical] {
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+html   [layout][vertical][reverse] {
+  -ms-flex-direction: column-reverse;
+  -webkit-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+}
+
+html   [layout][wrap] {
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+html   [layout][wrap-reverse] {
+  -ms-flex-wrap: wrap-reverse;
+  -webkit-flex-wrap: wrap-reverse;
+  flex-wrap: wrap-reverse;
+}
+
+html   [flex] {
+  -ms-flex: 1 1 0.000000001px;
+  -webkit-flex: 1;
+  flex: 1;
+  -webkit-flex-basis: 0.000000001px;
+  flex-basis: 0.000000001px;
+}
+
+html   [vertical][layout] > [flex][auto-vertical], html   [vertical][layout]  [flex][auto-vertical] {
+  -ms-flex: 1 1 auto;
+  -webkit-flex-basis: auto;
+  flex-basis: auto;
+}
+
+html   [flex][auto] {
+  -ms-flex: 1 1 auto;
+  -webkit-flex-basis: auto;
+  flex-basis: auto;
+}
+
+html   [flex][none] {
+  -ms-flex: none;
+  -webkit-flex: none;
+  flex: none;
+}
+
+html   [flex][one] {
+  -ms-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+html   [flex][two] {
+  -ms-flex: 2;
+  -webkit-flex: 2;
+  flex: 2;
+}
+
+html   [flex][three] {
+  -ms-flex: 3;
+  -webkit-flex: 3;
+  flex: 3;
+}
+
+html   [flex][four] {
+  -ms-flex: 4;
+  -webkit-flex: 4;
+  flex: 4;
+}
+
+html   [flex][five] {
+  -ms-flex: 5;
+  -webkit-flex: 5;
+  flex: 5;
+}
+
+html   [flex][six] {
+  -ms-flex: 6;
+  -webkit-flex: 6;
+  flex: 6;
+}
+
+html   [flex][seven] {
+  -ms-flex: 7;
+  -webkit-flex: 7;
+  flex: 7;
+}
+
+html   [flex][eight] {
+  -ms-flex: 8;
+  -webkit-flex: 8;
+  flex: 8;
+}
+
+html   [flex][nine] {
+  -ms-flex: 9;
+  -webkit-flex: 9;
+  flex: 9;
+}
+
+html   [flex][ten] {
+  -ms-flex: 10;
+  -webkit-flex: 10;
+  flex: 10;
+}
+
+html   [flex][eleven] {
+  -ms-flex: 11;
+  -webkit-flex: 11;
+  flex: 11;
+}
+
+html   [flex][twelve] {
+  -ms-flex: 12;
+  -webkit-flex: 12;
+  flex: 12;
+}
+
+/* alignment in cross axis */
+
+html   [layout][start] {
+  -ms-flex-align: start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+}
+
+html   [layout][center], html   [layout][center-center] {
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+html   [layout][end] {
+  -ms-flex-align: end;
+  -webkit-align-items: flex-end;
+  align-items: flex-end;
+}
+
+/* alignment in main axis */
+
+html   [layout][start-justified] {
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+
+html   [layout][center-justified], html   [layout][center-center] {
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+html   [layout][end-justified] {
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+
+html   [layout][around-justified] {
+  -ms-flex-pack: distribute;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+}
+
+html   [layout][justified] {
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+/* self alignment */
+
+html   [self-start] {
+  -ms-align-self: flex-start;
+  -webkit-align-self: flex-start;
+  align-self: flex-start;
+}
+
+html   [self-center] {
+  -ms-align-self: center;
+  -webkit-align-self: center;
+  align-self: center;
+}
+
+html   [self-end] {
+  -ms-align-self: flex-end;
+  -webkit-align-self: flex-end;
+  align-self: flex-end;
+}
+
+html   [self-stretch] {
+  -ms-align-self: stretch;
+  -webkit-align-self: stretch;
+  align-self: stretch;
+}
+
+/*******************************
+          Other Layout
+*******************************/
+
+html   [block] {
+  display: block;
+}
+
+/* ie support for hidden */
+html   [hidden] {
+  display: none !important;
+}
+
+html   [relative] {
+  position: relative;
+}
+
+html   [fit] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+body[fullbleed] {
+  margin: 0;
+  height: 100vh;
+}
+
+/*******************************
+            Other
+*******************************/
+
+html   [segment], html   segment {
+  display: block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 1em 0.5em;
+  padding: 1em;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 5px 5px 5px 5px;
+}</style><link rel="import" href="https://docs-05-dot-polymer-project.appspot.com/0.5/components/core-ajax/core-ajax.html">
+        <link rel="import" href="https://epidev03.citizensadvice.org.uk/static-src/component/bmis-tasklist.html">
+    <link rel="shortcut icon" href="https://epidev03.citizensadvice.org.uk/static/layout/favicon.ico"><link rel="apple-touch-icon" href="https://epidev03.citizensadvice.org.uk/static/images/apple-touch-icon.png">
+
+    
+    <!--[if gt IE 7]><meta -->
+    <script>/**
+ *  @fileoverview
+ *
+ *  Scripts to go directly into the head element
+ *  These should be very small and therefore they should not be included as a file, but as inline JS
+ *
+ *  @author Daniel Lewis
+ */
+
+(function (document, window ) {
+
+    /**
+     *	Update the no-js class to js
+     */
+    var html = document.documentElement;
+    html.className = html.className.replace(/\bno-js\b/, 'js');
+
+    /**
+     *	Creates a dummy version of $
+     *	Any functions add will be queued to run after jQuery is built and ready
+     */
+    window.$ = function (fn) {
+        var q = window.$.q = window.$.q || [];
+        q.push(fn);
+        if (typeof fn !== 'function') {
+            throw new Error('jQuery not yet loaded');
+        }
+    };
+
+    /**
+     *	Cookie banner
+     */
+    if (/\beprivacy=3(;|$)/i.test(document.cookie)) {
+        html.className += ' hide-cookie-monster';
+    }
+
+    /**
+     *  Are (session) cookies accepted
+     */
+    document.cookie = 'z=1; path=/';
+    if (/(?:^| )z=1(?:;|$)/.test(document.cookie)) {
+        document.cookie = 'z=; expires=' + new Date(0).toUTCString() + '; path=/';
+    } else {
+        html.className = html.className += ' no-cookies';
+    }
+
+    /**
+     *  Do we need to load any polyfills
+     *  See http://kangax.github.io/compat-table/es5/
+     *  If the browser doesn't support bind we will load them all
+     *  We are not supporting IE7
+     */
+    if (!$.bind) {
+        // We were using an escaped character for the closing script
+        // but Ugligy JS was minifying it
+        // Use the replace instead
+        document.write('<script src="/static/build/js/polyfills.js"><~script>'.replace('~','/'));
+    }
+
+}(document, window ));
+
+
+
+</script>
+    <!--<![endif]-->
+    <!--[if lt IE 9]><script src="/static/build/js/ie9.js"></script><![endif]-->
+    <script>window.ga=function(){};</script>
+    
+<meta name="cab-template" content="SmartMeterCheckerToolPage"><meta name="cab-id" content="73588"><meta name="robots" content="noindex, nofollow"><style>[touch-action="none"]{ -ms-touch-action: none; touch-action: none;}
+[touch-action="auto"]{ -ms-touch-action: auto; touch-action: auto;}
+[touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x;}
+[touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y;}
+[touch-action="pan-x pan-y"],[touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y;}
+[touch-action="manipulation"]{ -ms-touch-action: manipulation; touch-action: manipulation;}
+</style><script charset="UTF-8" src="./meterpage-smets2_files/tag.js"></script><script charset="UTF-8" id="_lpTagScriptId_0" src="./meterpage-smets2_files/jsonp"></script></head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T5MB575" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!--[if IE 8]><div class="ie8"><![endif]-->
+
+    
+
+    <div class="skip-nav">
+        <a class="screenreader screenreader--focusable" href="https://epidev03.citizensadvice.org.uk/development/test-tools/smartmeter-checker-tool/#main-nav">Skip to navigation</a>
+        <a class="screenreader screenreader--focusable" href="https://epidev03.citizensadvice.org.uk/development/test-tools/smartmeter-checker-tool/#main">Skip to content</a>
+        <a class="screenreader screenreader--focusable" href="https://epidev03.citizensadvice.org.uk/development/test-tools/smartmeter-checker-tool/#footer">Skip to footer</a>
+    </div>
+
+    
+
+<div class="cookie-monster hide-no-cookies hide-no-js no-print" role="note">
+    <div class="cookie-monster__content">
+        <p>We use cookies to improve your experience of our website. <a href="https://epidev03.citizensadvice.org.uk/resources-and-tools/about-this-site/privacy-and-cookies/">You can find out more or opt-out from some cookies</a>.</p>
+        <button type="button" class="button--blue cookie-monster__close" data-action="close">
+            I’m fine with cookies
+        </button>
+    </div>
+</div>
+
+    <header class="main-header">
+        <div class="main-header__content">
+            <a href="https://epidev03.citizensadvice.org.uk/" class="main-header__logo">
+                <img onerror="this.onerror=null;this.src=&#39;/Static/images/logos/ca-logo_100px.svg.png&#39;;" src="./meterpage-smets2_files/ca-logo_100px.svg" alt="Citizens Advice home">
+                <img src="./meterpage-smets2_files/ca-logo-mobile.svg" class="main-header__img--mobile no-print wide" onerror="this.onerror=null;this.src=&#39;/static/images/logos/ca-logo-mobile.svg.png&#39;" alt="Citizens Advice">
+            </a>
+
+            <div class="main-header__links" data-track-zone="top-bar">
+                <a class="main-header__menu-link js-toggle-menu" href="https://epidev03.citizensadvice.org.uk/development/test-tools/smartmeter-checker-tool/#footer">
+                    <i class="icon-menu" aria-hidden="true"></i>
+                    Menu
+                </a>
+
+                <nav class="main-header__top-nav">
+                    <a href="https://epidev03.citizensadvice.org.uk/development/test-tools/smartmeter-checker-tool/?lang=cy">Cymraeg</a>
+                    
+                        <a class="hide-offline main-header__login" href="https://epidev03.citizensadvice.org.uk/login/?redirect=false&amp;ReturnUrl=%2fdevelopment%2ftest-tools%2fsmartmeter-checker-tool%2f">
+                            <i aria-hidden="true" class="icon-key"></i>
+                            Sign in
+                        </a>
+                    
+                    
+                    
+                </nav>
+
+                
+                    <form action="https://epidev03.citizensadvice.org.uk/resources-and-tools/search-navigation-tools/Search/" role="search" class="main-header__search hide-offline">
+                        
+                        <label for="main-header__search__input" class="screenreader">
+                            Search</label>
+                        <input type="search" id="main-header__search__input" name="q" placeholder="" class="main-header__search__input">
+                        <input type="hidden" name="c" value="TOP-PUBLIC">
+                        <button type="submit" title="Search" class="main-header__search__submit">
+                            <i aria-hidden="true" class="icon-search icon--no-text"></i>
+                            <span class="screenreader">
+                                Search</span>
+                        </button>
+                    </form>
+                
+
+            </div>
+        </div>
+    </header>
+
+    
+
+<nav id="main-nav" class="main-nav" role="navigation" aria-label="Main navigation" data-track-zone="main-nav" tabindex="-1" style="overflow: visible;">
+	<ul class="nav-list-primary">
+        
+            <li class="top-item js-mega-menu" style="display: list-item;">
+                <a href="https://epidev03.citizensadvice.org.uk/benefits/">Benefitsa</a>
+                <div class="mega-menu hide-no-js mega-menu--show-right">
+    <span class="mega-menu__arrow"></span>
+    <div class="mega-menu__left" data-track-zone="mega-menu-left">
+        
+            <h2 class="mega-menu__title"><strong><a href="https://epidev03.citizensadvice.org.uk/benefits/">Benefitsa</a></strong></h2>
+            <ul>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/benefits/benefits-introduction/">Benefits - introduction</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/benefits/help-if-on-a-low-income/">Help on a low income</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/benefits/sick-or-disabled-people-and-carers/">Sick or disabled people and carers</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/benefits/children-and-young-people/">Children and young people</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/benefits/older-people/">Older people</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/benefits/coming-from-abroad-and-claiming-benefits-the-habitual-residence-test/">Coming from abroad and claiming benefits</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/benefits/universal-credit/">Universal Credit</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/benefits/the-benefit-cap/">The Benefit Cap</a></li>
+        
+                <li class="view-all"><a href="https://epidev03.citizensadvice.org.uk/benefits/">View all in Benefitsa</a></li>
+            </ul>
+        
+    </div>
+    <div class="mega-menu__right" data-track-zone="mega-menu-right">
+		
+            <h3 class="mega-menu__title"><strong>Top links</strong></h3>
+            <ul>
+            <li></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/benefits/help-if-on-a-low-income/housing-benefit/help-with-your-rent-housing-benefit/">Housing benefit</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/about-us/policy/policy-research-topics/welfare-policy-research-surveys-and-consultation-responses/welfare-surveys-and-consultation-responses/making-welfare-work-locally/">Making welfare work locally - Best practice research</a></li>
+        
+            </ul>
+        
+	    
+    </div>
+</div>
+            </li>
+        
+            <li class="top-item js-mega-menu" style="display: list-item;">
+                <a href="https://epidev03.citizensadvice.org.uk/work/">Work</a>
+                <div class="mega-menu hide-no-js mega-menu--show-right">
+    <span class="mega-menu__arrow"></span>
+    <div class="mega-menu__left" data-track-zone="mega-menu-left">
+        
+            <h2 class="mega-menu__title"><strong><a href="https://epidev03.citizensadvice.org.uk/work/">Work</a></strong></h2>
+            <ul>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/work/rights-at-work/">Rights at work</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/work/leaving-a-job/">Leaving a job</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/work/problems-at-work/">Problems at work</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/work/discrimination-at-work/">Discrimination at work</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/work/health-and-safety-at-work/">Health and safety at work</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/work/young-people/">Young people</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/work/employment-advice-in-bsl/">Employment advice in BSL</a></li>
+        
+                
+            </ul>
+        
+    </div>
+    <div class="mega-menu__right" data-track-zone="mega-menu-right">
+		
+            <h3 class="mega-menu__title"><strong>Top links</strong></h3>
+            <ul>
+            <li></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/work/problems-at-work/Letter-to-raise-a-grievance-at-work/">Template letter to raise a grievance at work</a></li>
+        
+            </ul>
+        
+	    
+    </div>
+</div>
+            </li>
+        
+            <li class="top-item js-mega-menu" style="display: list-item;">
+                <a href="https://epidev03.citizensadvice.org.uk/debt-and-money/">Debt and money</a>
+                <div class="mega-menu hide-no-js mega-menu--show-right">
+    <span class="mega-menu__arrow"></span>
+    <div class="mega-menu__left" data-track-zone="mega-menu-left">
+        
+            <h2 class="mega-menu__title"><strong><a href="https://epidev03.citizensadvice.org.uk/debt-and-money/">Debt and money</a></strong></h2>
+            <ul>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/debt-and-money/help-with-debt/">Help with debt</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/debt-and-money/debt-solutions/">Debt solutions</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/debt-and-money/budgeting/">Budgeting</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/debt-and-money/mortgage-problems/">Mortgage problems</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/debt-and-money/rent-arrears/">Rent arrears</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/debt-and-money/action-your-creditor-can-take/">Action your creditor can take</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/debt-and-money/borrowing-money/">Borrowing money</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/debt-and-money/banking/">Banking</a></li>
+        
+                <li class="view-all"><a href="https://epidev03.citizensadvice.org.uk/debt-and-money/">View all in Debt and money</a></li>
+            </ul>
+        
+    </div>
+    <div class="mega-menu__right" data-track-zone="mega-menu-right">
+		
+            <h3 class="mega-menu__title"><strong>Top links</strong></h3>
+            <ul>
+            <li></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/debt-and-money/pensions/">Our pensions advice</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/debt-and-money/sample-letters-to-creditors/">Write a letter to your creditors</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/debt-and-money/other-resources-and-tools-related-to-debt-and-money/financial-healthcheck/">Take a financial healthcheck with the Money Advice Service</a></li>
+        
+            </ul>
+        
+	    
+    </div>
+</div>
+            </li>
+        
+            <li class="top-item js-mega-menu" style="display: list-item;">
+                <a href="https://epidev03.citizensadvice.org.uk/consumer/">Consumer</a>
+                <div class="mega-menu hide-no-js mega-menu--hide-left mega-menu--show-right">
+    <span class="mega-menu__arrow"></span>
+    
+    <div class="mega-menu__right" data-track-zone="mega-menu-right">
+		
+            <h3 class="mega-menu__title"><strong>Top links</strong></h3>
+            <ul>
+            <li></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/consumer/get-more-help/if-you-need-more-help-about-a-consumer-issue/">Contact the consumer helpline</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/consumer/get-more-help/report-to-trading-standards/">Report to Trading Standards</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/consumer/buying-or-repairing-a-car/problems-with-a-used-car/">Problems with a used car</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/consumer/somethings-gone-wrong-with-a-purchase/return-faulty-goods/">Return faulty goods</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/consumer/buying-or-repairing-a-car/buying-a-used-car/">Buying a used car</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/consumer/energy/energy-supply/">Your energy supply</a></li>
+        
+            </ul>
+        
+	    <div class="mega-menu__promo" data-track-zone="mega-menu-promo">
+            
+			<div class="mega-menu-promo-block-content">
+                <a href="https://epidev03.citizensadvice.org.uk/consumer/" class="promoLink">View all</a>
+				<p></p>
+			</div>
+	    </div>
+    </div>
+</div>
+            </li>
+        
+            <li class="top-item js-mega-menu" style="display: list-item;">
+                <a href="https://epidev03.citizensadvice.org.uk/family/">Family</a>
+                <div class="mega-menu hide-no-js mega-menu--show-right">
+    <span class="mega-menu__arrow"></span>
+    <div class="mega-menu__left" data-track-zone="mega-menu-left">
+        
+            <h2 class="mega-menu__title"><strong><a href="https://epidev03.citizensadvice.org.uk/family/">Family</a></strong></h2>
+            <ul>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/family/living-together-marriage-and-civil-partnership/">Living together, marriage and civil partnership</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/family/ending-a-relationship/">Ending a relationship</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/family/death-and-wills/">Death and wills</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/family/gender-violence/">Gender violence</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/family/children-and-young-people/">Children and young people</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/family/looking-after-people/">Looking after people</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/family/education/">Education</a></li>
+        
+                
+            </ul>
+        
+    </div>
+    <div class="mega-menu__right" data-track-zone="mega-menu-right">
+		
+            <h3 class="mega-menu__title"><strong>Top links</strong></h3>
+            <ul>
+            <li></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/family/death-and-wills/wills/">Making a will</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/family/children-and-young-people/child-maintenance/child-maintenance-where-to-start/">Child maintenance - where to start</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/health/nhs-and-social-care-complaints/complaining-about-social-care-services/">Complaining about social care services</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/family/looking-after-people/managing-affairs-for-someone-else/">What does it mean to have power of attorney?</a></li>
+        
+            </ul>
+        
+	    <div class="mega-menu__promo" data-track-zone="mega-menu-promo">
+            
+			<div class="mega-menu-promo-block-content">
+                <a href="https://epidev03.citizensadvice.org.uk/family/children-and-young-people/child-abuse/" class="promoLink">Child abuse - advice and support</a>
+				<p>Advice for people affected by child abuse.</p>
+			</div>
+	    </div>
+    </div>
+</div>
+            </li>
+        
+            <li class="top-item js-mega-menu" style="display: list-item;">
+                <a href="https://epidev03.citizensadvice.org.uk/housing/">Housing</a>
+                <div class="mega-menu hide-no-js mega-menu--show-right">
+    <span class="mega-menu__arrow"></span>
+    <div class="mega-menu__left" data-track-zone="mega-menu-left">
+        
+            <h2 class="mega-menu__title"><strong><a href="https://epidev03.citizensadvice.org.uk/housing/">Housing</a></strong></h2>
+            <ul>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/housing/renting-privately/">Renting privately</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/housing/finding-a-place-to-live/">Finding a place to live</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/debt-and-money/mortgage-problems/">Mortgage problems</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/housing/renting-a-home/">Renting a home</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/housing/repairs-in-rented-housing/">Repairs in rented housing</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/housing/council-tax/">Council tax</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/housing/rent-arrears/">Rent arrears</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/housing/discrimination-in-housing/">Discrimination in housing</a></li>
+        
+                <li class="view-all"><a href="https://epidev03.citizensadvice.org.uk/housing/">View all in Housing</a></li>
+            </ul>
+        
+    </div>
+    <div class="mega-menu__right" data-track-zone="mega-menu-right">
+		
+            <h3 class="mega-menu__title"><strong>Top links</strong></h3>
+            <ul>
+            <li></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/housing/problems-where-you-live/anti-social-behaviour-in-housing/">Anti-social behaviour in housing</a></li>
+        
+            </ul>
+        
+	    
+    </div>
+</div>
+            </li>
+        
+            <li class="top-item js-mega-menu" style="display: list-item;">
+                <a href="https://epidev03.citizensadvice.org.uk/law-and-courts/">Law and courts</a>
+                <div class="mega-menu hide-no-js mega-menu--show-right">
+    <span class="mega-menu__arrow"></span>
+    <div class="mega-menu__left" data-track-zone="mega-menu-left">
+        
+            <h2 class="mega-menu__title"><strong><a href="https://epidev03.citizensadvice.org.uk/law-and-courts/">Law and courts</a></strong></h2>
+            <ul>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/law-and-courts/brexit/">Brexit</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/law-and-courts/legal-system/">Legal system</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/law-and-courts/discrimination/">Discrimination</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/law-and-courts/parking-tickets/">Parking tickets</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/law-and-courts/civil-rights/">Civil rights</a></li>
+        
+                
+            </ul>
+        
+    </div>
+    <div class="mega-menu__right" data-track-zone="mega-menu-right">
+		
+            <h3 class="mega-menu__title"><strong>Top links</strong></h3>
+            <ul>
+            <li></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/law-and-courts/legal-system/taking-legal-action/small-claims/small-claims/">Small claims procedure</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/law-and-courts/legal-system/taking-legal-action/help-with-legal-costs-legal-aid/">When you can get legal aid</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/law-and-courts/legal-system/police/police-powers/">Police powers</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/family/gender-violence/rape-and-sexual-assault/">Help for victims of rape and sexual violence</a></li>
+        
+            </ul>
+        
+	    <div class="mega-menu__promo" data-track-zone="mega-menu-promo">
+            
+			<div class="mega-menu-promo-block-content">
+                <a href="https://epidev03.citizensadvice.org.uk/law-and-courts/legal-system/taking-legal-action/help-with-legal-costs-free-or-affordable-help/" class="promoLink">Free or affordable legal help</a>
+				<p>Where to get free or low cost legal advice.</p>
+			</div>
+	    </div>
+    </div>
+</div>
+            </li>
+        
+            <li class="top-item js-mega-menu" style="display: list-item;">
+                <a href="https://epidev03.citizensadvice.org.uk/immigration/">Immigration</a>
+                
+            </li>
+        
+            <li class="top-item js-mega-menu" style="display: list-item;">
+                <a href="https://epidev03.citizensadvice.org.uk/health/">Health</a>
+                <div class="mega-menu hide-no-js mega-menu--show-right">
+    <span class="mega-menu__arrow"></span>
+    <div class="mega-menu__left" data-track-zone="mega-menu-left">
+        
+            <h2 class="mega-menu__title"><strong><a href="https://epidev03.citizensadvice.org.uk/health/">Health</a></strong></h2>
+            <ul>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/health/nhs-healthcare/">NHS healthcare</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/health/help-with-health-costs/">Help with health costs</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/health/discrimination-in-health-and-care-services/">Discrimination in health and care services</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/health/nhs-and-social-care-complaints/">NHS and social care complaints</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/health/dental-treatment/">Dental treatment abroad</a></li>
+        
+                
+            </ul>
+        
+    </div>
+    <div class="mega-menu__right" data-track-zone="mega-menu-right">
+		
+            <h3 class="mega-menu__title"><strong>Top links</strong></h3>
+            <ul>
+            <li></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/health/nhs-healthcare/nhs-patients-rights/">What health care can I get on the NHS?</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/health/nhs-healthcare/nhs-patients-rights/">NHS patients' rights</a></li>
+        
+                <li><a href="http://www.nhs.uk/Pages/HomePage.aspx" rel="external" class="a-external">NHS Choices - Information on hospitals, conditions and treatments.</a></li>
+        
+            </ul>
+        
+	    <div class="mega-menu__promo" data-track-zone="mega-menu-promo">
+            
+			<div class="mega-menu-promo-block-content">
+                <a href="https://epidev03.citizensadvice.org.uk/health/nhs-and-social-care-complaints/" class="promoLink">NHS and adult social care complaints</a>
+				<p>Find out how to complain about your doctor or health visitor.</p>
+			</div>
+	    </div>
+    </div>
+</div>
+            </li>
+        
+            <li class="top-item js-mega-menu" style="display: list-item;">
+                <a href="https://epidev03.citizensadvice.org.uk/about-us/">More from us</a>
+                <div class="mega-menu hide-no-js mega-menu--show-right">
+    <span class="mega-menu__arrow"></span>
+    <div class="mega-menu__left" data-track-zone="mega-menu-left">
+        
+            <h2 class="mega-menu__title"><strong><a href="https://epidev03.citizensadvice.org.uk/about-us/">About Citizens Advice</a></strong></h2>
+            <ul>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/about-us/introduction-to-the-citizens-advice-service/">Introduction to the Citizens Advice service</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/about-us/how-we-provide-advice/">How we provide advice</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/about-us/contact-us/">Contact us</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/about-us/difference-we-make/">The difference we make</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/about-us/support-us/">Support us</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/about-us/policy/">Policy research</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/about-us/campaigns/">Campaigns</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/about-us/how-citizens-advice-works/">How Citizens Advice works</a></li>
+        
+                <li class="view-all"><a href="https://epidev03.citizensadvice.org.uk/about-us/">View all in About Citizens Advice</a></li>
+            </ul>
+        
+    </div>
+    <div class="mega-menu__right" data-track-zone="mega-menu-right">
+		
+            <h3 class="mega-menu__title"><strong>Top links</strong></h3>
+            <ul>
+            <li></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/about-us/how-we-provide-advice/advice/">Find your local Citizens Advice</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/about-us/support-us/volunteering/">Volunteer with us</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/about-us/how-citizens-advice-works/job-and-voluntary-opportunities/">Jobs in our network</a></li>
+        
+                <li><a href="https://epidev03.citizensadvice.org.uk/about-us/how-citizens-advice-works/media/press-releases/">Press releases</a></li>
+        
+            </ul>
+        
+	    <div class="mega-menu__promo" data-track-zone="mega-menu-promo">
+            <img src="./meterpage-smets2_files/heritageblue-mugs-200x200px.png" alt="">
+			<div class="mega-menu-promo-block-content">
+                <a href="https://blogs.citizensadvice.org.uk/" class="promoLink" rel="external">Our blogs</a>
+				<p>Read what we're saying about a range of issues</p>
+			</div>
+	    </div>
+    </div>
+</div>
+            </li>
+        
+            <li class="top-item js-mega-menu" style="display: none;">
+                <a href="https://epidev03.citizensadvice.org.uk/test1/">test</a>
+                
+            </li>
+        
+            <li class="top-item js-mega-menu" style="display: none;">
+                <a href="https://epidev03.citizensadvice.org.uk/testing-obs-training/">Testing OBS training</a>
+                
+            </li>
+        
+            <li class="top-item js-mega-menu" style="display: none;">
+                <a href="https://epidev03.citizensadvice.org.uk/wb-referral-form-test/">WB Referral Form Test</a>
+                
+            </li>
+        
+            <li class="top-item js-mega-menu" style="display: none;">
+                <a href="https://epidev03.citizensadvice.org.uk/last-reviewed-date-LegAdv/">Legacy Advisernet</a>
+                
+            </li>
+        
+            <li class="top-item js-mega-menu" style="display: none;">
+                <a href="https://epidev03.citizensadvice.org.uk/last-reviewed-date-Adv/">Advisernet</a>
+                
+            </li>
+        
+            <li class="top-item js-mega-menu" style="display: none;">
+                <a href="https://epidev03.citizensadvice.org.uk/last-reviewed-date-Advice/">Advice Page</a>
+                
+            </li>
+        
+            <li class="top-item js-mega-menu" style="display: none;">
+                <a href="https://epidev03.citizensadvice.org.uk/last-reviewed-date-sample-letter/">Sample letter page</a>
+                
+            </li>
+        
+            <li class="top-item js-mega-menu" style="display: none;">
+                <a href="https://epidev03.citizensadvice.org.uk/baztest/">baztest</a>
+                
+            </li>
+        
+            <li class="top-item js-mega-menu" style="display: none;">
+                <a href="https://epidev03.citizensadvice.org.uk/debt-and-money/help-with-debt/get-help-with-your-debts/non-priority-debt-repayment-calculator/">foobartest</a>
+                
+            </li>
+        
+        <li class="nav-list-primary-more js-more-menu" style="display: list-item;">
+            <a href="https://epidev03.citizensadvice.org.uk/development/test-tools/smartmeter-checker-tool/#!">More<i aria-hidden="true" class="icon-down"></i></a>
+            <ul class="main-nav__more-links"><li><a href="https://epidev03.citizensadvice.org.uk/test1/">test</a></li><li><a href="https://epidev03.citizensadvice.org.uk/testing-obs-training/">Testing OBS training</a></li><li><a href="https://epidev03.citizensadvice.org.uk/wb-referral-form-test/">WB Referral Form Test</a></li><li><a href="https://epidev03.citizensadvice.org.uk/last-reviewed-date-LegAdv/">Legacy Advisernet</a></li><li><a href="https://epidev03.citizensadvice.org.uk/last-reviewed-date-Adv/">Advisernet</a></li><li><a href="https://epidev03.citizensadvice.org.uk/last-reviewed-date-Advice/">Advice Page</a></li><li><a href="https://epidev03.citizensadvice.org.uk/last-reviewed-date-sample-letter/">Sample letter page</a></li><li><a href="https://epidev03.citizensadvice.org.uk/baztest/">baztest</a></li><li><a href="https://epidev03.citizensadvice.org.uk/debt-and-money/help-with-debt/get-help-with-your-debts/non-priority-debt-repayment-calculator/">foobartest</a></li></ul>
+        </li>
+    </ul>
+</nav>
+
+
+
+    <div class="main-container">
+        
+
+<nav role="navigation" class="main-breadcrumb" aria-label="Breadcrumb" data-track-zone="breadcrumb">
+
+    <div class="main-breadcrumb__content breadcrumb">
+        
+            <a href="https://epidev03.citizensadvice.org.uk/resources-and-tools/about-this-site/location/" class="breadcrumb__extent-link js-extent-link">
+                England
+                <i aria-disabled="true" class="icon-down"></i>
+            </a>
+            <div class="breadcrumb__extent-popup js-extent-popup hide hide-offline" data-track-zone="breadcrumb-extent-switcher">
+                <p><strong>This advice applies to England:</strong></p>
+                <ul class="arrow-list">
+                    <li><a href="https://epidev03.citizensadvice.org.uk/">England home
+                    </a></li>
+                </ul>
+                <p>Advice can vary depending on where you live.</p>
+                <p>Advice for other parts of the UK:</p>
+                <ul class="arrow-list">
+                    
+                            <li><a rel="alternate" href="https://epidev03.citizensadvice.org.uk/?lang=en-NIR">Northern Ireland home</a></li>
+                        
+                            <li><a rel="alternate" href="https://epidev03.citizensadvice.org.uk/?lang=en-SCT">Scotland home</a></li>
+                        
+                            <li><a rel="alternate" href="https://epidev03.citizensadvice.org.uk/?lang=en-WLS">Wales home</a></li>
+                        
+                </ul>
+
+            </div>
+        
+
+        
+
+        
+
+        
+            <span class="breadcrumb__item">
+                <i aria-hidden="true" class="icon-guillemet-right"></i>
+                <a>Check your smart meter</a>
+            </span>
+        
+    </div>
+
+</nav>
+
+
+        
+        
+
+
+<style>
+
+    /* MOBILE */
+    @media(max-width:599px) {
+
+        .section-notice-mobile {
+            display: block;
+        }
+        o-flag__media {
+            padding-right: 0;
+        }
+    }
+
+</style>
+
+
+
+
+
+        
+        
+     
+    <main role="main" id="main" tabindex="-1">
+        
+        <div class="main-content">
+             
+    <form method="post" action="https://epidev03.citizensadvice.org.uk/development/test-tools/smartmeter-checker-tool/" id="ctl00" class="form">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTgzNjcyMzM2NmQYAgUjY3RsMDAkY3RsMDAkUmVxdWlyZWRSZXNvdXJjZXNGb290ZXIPBQZGb290ZXJkBSNjdGwwMCRjdGwwMCRSZXF1aXJlZFJlc291cmNlc0hlYWRlcg8FBkhlYWRlcmSMqkp2N0mGWVpGds/9/WDowJ61FA==">
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="6F5DD301">
+</div>
+
+        
+
+        <div id="RootPlaceHolder_RootPlaceHolder_PnlScenario1_4" class="smart--meter__results">
+	
+            <div class="meter--details">
+                <h2>Your smart meter</h2>
+                <dl>
+                    <dt>Fuel type</dt>
+                    <dd>
+                        <span id="RootPlaceHolder_RootPlaceHolder_LblMeter_Fuel" class="electric-icon">Electricity</span></dd>
+                    <dt>Meter type</dt>
+                    <dd>
+                        <span id="RootPlaceHolder_RootPlaceHolder_LblMeter_Type" class="meter-icon">SMETS2</span></dd>
+                    <dt>Current supplier</dt>
+                    <dd>
+                        <span id="RootPlaceHolder_RootPlaceHolder_LblMeter_Supplier" class="supplier-icon-006">Barlow Energy</span>
+                        <br>
+                        <a href="https://epidev03.citizensadvice.org.uk/development/test-tools/smartmeter-checker-tool/#" class="supplier--details">Not your supplier?</a>
+                        <div class="supplier--details__info hide">
+                            <p>This supplier provides your energy on behalf of the company you pay your bills to.</p>
+                            <p>You'll find this supplier's name on your bill or the company's website.</p>
+                        </div>
+                    </dd>
+                    <dt>
+                        <span id="RootPlaceHolder_RootPlaceHolder_LblMeter_MPxN">MPAN</span></dt>
+                    <dd>
+                        <span id="RootPlaceHolder_RootPlaceHolder_LblMeter_Number" class="hash-icon">123456789101</span></dd>
+                </dl>
+            </div>
+            <div class="meter--info o-grid__unit--m-1-1 o-grid__unit--d-3-4">
+                <div>
+		<p><em>&nbsp;</em></p>
+<h2>What this means</h2>
+<p dir="ltr">Your smart meter should work in smart mode.</p>
+<p>This is because you have a 2nd generation smart meter that’s connected to the UK’s smart meter network.</p>
+<p>Sometimes a supplier or tariff might not support your meter. Contact your supplier if your meter doesn’t work in smart mode but you think it should.</p>
+<h3>If you're thinking about switching</h3>
+<p><a title="Link to supplier list" href="https://www.smartdcc.co.uk/customer-hub/our-users/" rel="external" class="a-external">Check which suppliers will support your meter</a></p>
+	</div>
+
+                <div>
+                    
+                </div>
+
+                
+                <span id="RootPlaceHolder_RootPlaceHolder_LblDetailsCorrect">Correct for EC3N 101 as of 24 August 2020</span>
+            </div>
+            
+        
+</div>
+
+        
+
+        
+
+        
+
+    </form>
+
+        </div>
+    </main>
+    
+    
+
+<div class="share-bar__outer hide-offline hide-no-js">
+    <nav class="share-bar js-make-sticky" aria-label="Sharing options">			
+        
+            <a class="share-bar__link--twitter js-twitter" href="https://twitter.com/share?url=" data-track="Twitter" rel="external">
+                <i class="icon-twitter" aria-hidden="true"></i>
+                <span>Share on Twitter</span>
+            </a>
+        
+	    
+            <a class="share-bar__link--facebook js-facebook" href="https://www.facebook.com/sharer/sharer.php?u=" data-track="Facebook" rel="external">
+                <i class="icon-facebook" aria-hidden="true"></i>
+                <span>Share on Facebook</span>
+            </a>
+	    
+	    
+	    
+            <a class="share-bar__link--print" href="javascript:window.print();" data-track="Print">
+                <i class="icon-print" aria-hidden="true"></i>
+                <span>Print this page</span>
+            </a>
+	    
+	    
+        
+        
+        
+    </nav>
+</div>
+
+
+<script id="template-email-page" type="text/x-template" data-title="Email a link to this page" data-subject="From Citizens Advice" data-introduction="I thought you might be interested in this link from Citizens Advice:" data-thank-you="Your message has been sent." data-close="Close">
+    <p>
+        <i class="icon-email" aria-hidden="false"></i>
+        <a target="_blank" href="{mailto}" class="track mailLink" data-service="Native email" data-track-service="Native email">
+            Send from your own account</a>
+        or:
+    </p>
+
+    <form class="form" autocomplete="off">
+        <p class="highlight--error js-error" style="display:none">Please check the form for errors and try again.</p>
+        <input type="hidden" name="Language" value="en-GB">
+        <input type="hidden" name="PageId" value="73588">
+        <input type="hidden" name="QueryString" value="">
+        <label class="form__row" for="email-page-email">
+            To email address (required)
+            <input type="email" id="email-page-email" name="Email" required title="Please complete this field." autocomplete="off" />
+        </label>
+        <label class="form__row" for="email-page-name">
+            Your name (required)
+            <input type="text" id="email-page-name" name="Name" required pattern="^[ 'a-zA-Z0-9\-\xC0-\uffff]*$" title="Please use letters and spaces only" maxlength="35" autocomplete="off" />
+        </label>
+        <button type="submit" class="form__button-row button--big">Send email</button>
+    </form>
+
+</script>
+
+<div class="popup-background no-print hide-offline" style="display:none;">
+
+    <div id="RootPlaceHolder_ShareBar_divPopup" class="popup_feedback popup_content" style="display:none;" role="dialog" tabindex="-1">
+        <a role="button" class="popup__close" data-action="close" href="https://epidev03.citizensadvice.org.uk/development/test-tools/smartmeter-checker-tool/#!">
+            <i class="icon-cross" aria-hidden="true"></i>Close
+		</a>
+        <div id="RootPlaceHolder_ShareBar_plcPopup" role="form">
+
+</div>
+    </div>
+
+</div>
+     
+
+    </div>
+
+    
+
+<aside class="footer-feedback c-footer-feedback">
+    <h2 class="screenreader">
+        Feedback
+    </h2>
+    <div class="footer-feedback__content c-footer-feedback__body"><p>Is there anything wrong with this page?&nbsp;<strong><a href="https://www.research.net/r/J8PLH2H?p=/development/test-tools/smartmeter-checker-tool/&amp;u=Mozilla%252f5.0+(Macintosh%253b+Intel+Mac+OS+X+10_14_5)+AppleWebKit%252f537.36+(KHTML%252c+like+Gecko)+Chrome%252f83.0.4103.116+Safari%252f537.36" target="_blank" rel="external" class="a-external">Let us know</a></strong></p></div>
+</aside>
+
+    
+
+<footer id="footer" role="contentinfo" class="main-footer" data-track-zone="footer" tabindex="-1">
+    <div class="main-footer__content flex-row js-equal-height"><div class="main-footer__box col-md-3 col-sm-6">
+	
+<h2>Advice</h2>
+
+
+
+  <ul class="li--arrow">
+
+    <li><a href="https://epidev03.citizensadvice.org.uk/benefits/">Benefits</a></li>
+
+    <li><a href="https://epidev03.citizensadvice.org.uk/work/">Work</a></li>
+
+    <li><a href="https://epidev03.citizensadvice.org.uk/debt-and-money/">Debt and money</a></li>
+
+    <li><a href="https://epidev03.citizensadvice.org.uk/consumer/">Consumer</a></li>
+
+    <li><a href="https://epidev03.citizensadvice.org.uk/family/">Family</a></li>
+
+    <li><a href="https://epidev03.citizensadvice.org.uk/housing/">Housing</a></li>
+
+    <li><a href="https://epidev03.citizensadvice.org.uk/law-and-courts/">Law and courts</a></li>
+
+    <li><a href="https://epidev03.citizensadvice.org.uk/immigration/">Immigration</a></li>
+
+    <li><a href="https://epidev03.citizensadvice.org.uk/health/">Health</a></li>
+
+    <li><a href="https://epidev03.citizensadvice.org.uk/resources-and-tools/search-navigation-tools/a-to-z-of-advice/">A to Z of advice</a></li>
+
+  </ul>
+
+
+
+</div><div class="main-footer__box col-md-3 col-sm-6">
+	
+<h2>Resources and tools</h2>
+
+
+
+  <ul class="li--arrow">
+
+    <li><a href="https://epidev03.citizensadvice.org.uk/debt-and-money/budgeting/budgeting/work-out-your-budget/">Budgeting tool</a></li>
+
+    <li><a href="https://epidev03.citizensadvice.org.uk/about-us/how-citizens-advice-works/products-and-services/adviser-resources/">Adviser resources</a></li>
+
+    <li><a href="https://epidev03.citizensadvice.org.uk/about-us/how-we-provide-advice/our-prevention-work/education/">Education resources</a></li>
+
+    <li><a href="https://epidev03.citizensadvice.org.uk/resources-and-tools/about-this-site/accessibility/">Accessibility</a></li>
+
+    <li><a href="https://epidev03.citizensadvice.org.uk/resources-and-tools/help/">Help</a></li>
+
+    <li><a href="https://epidev03.citizensadvice.org.uk/resources-and-tools/search-navigation-tools/Search/">Site search</a></li>
+
+  </ul>
+
+
+
+</div><div class="main-footer__box col-md-3 col-sm-6">
+	
+<h2>More from us</h2>
+
+
+
+  <ul class="li--arrow">
+
+    <li><a href="https://epidev03.citizensadvice.org.uk/about-us/">About us</a></li>
+
+    <li><a href="https://epidev03.citizensadvice.org.uk/about-us/how-citizens-advice-works/who-we-are-and-what-we-do/annual-reports/">Annual reports</a></li>
+
+    <li><a href="https://epidev03.citizensadvice.org.uk/about-us/contact-us/">Contact us</a></li>
+
+    <li><a href="https://epidev03.citizensadvice.org.uk/about-us/contact-us/complaints/">Complaints</a></li>
+
+    <li><a href="https://epidev03.citizensadvice.org.uk/about-us/campaigns/">Campaigns</a></li>
+
+    <li><a href="https://epidev03.citizensadvice.org.uk/about-us/how-citizens-advice-works/media/">Media</a></li>
+
+    <li><a href="https://epidev03.citizensadvice.org.uk/about-us/policy/">Policy research</a></li>
+
+    <li><a href="https://epidev03.citizensadvice.org.uk/about-us/support-us/">Support us</a></li>
+
+    <li><a href="https://epidev03.citizensadvice.org.uk/about-us/support-us/volunteering/">Volunteering</a></li>
+
+    <li><a href="https://epidev03.citizensadvice.org.uk/about-us/how-citizens-advice-works/job-and-voluntary-opportunities/">Jobs</a></li>
+
+  </ul>
+
+
+
+</div><div class="flex-column col-md-3 col-sm-6">
+	<div class="flex-row js-equal-height"><div class="main-footer__box">
+		
+<h2>About Citizens Advice</h2>
+
+
+
+  <ul class="li--arrow">
+
+    <li><a href="https://epidev03.citizensadvice.org.uk/about-us/how-we-provide-advice/">How we provide advice</a></li>
+
+    <li><a href="https://epidev03.citizensadvice.org.uk/about-us/difference-we-make/">The difference we make</a></li>
+
+    <li><a href="https://epidev03.citizensadvice.org.uk/about-us/support-us/">Support us</a></li>
+
+    <li><a href="https://epidev03.citizensadvice.org.uk/about-us/how-citizens-advice-works/">How Citizens Advice works</a></li>
+
+    <li><a href="https://epidev03.citizensadvice.org.uk/resources-and-tools/about-this-site/disclaimer-and-copyright/">Disclaimer and copyright</a></li>
+
+  </ul>
+
+
+
+	</div></div>
+
+
+</div><div class="main-footer__box main-footer__box--copyright">
+	
+
+
+<div>
+		<p>Copyright ©&nbsp;2020&nbsp;Citizens Advice. All rights reserved.<br> Citizens Advice is an operating name of the National Association of Citizens Advice Bureaux. Registered charity number 279057<br> VAT number 726 0202 76 Company limited by guarantee. Registered number 1436945 England<br> Registered office: Citizens Advice, 3rd Floor North, 200 Aldersgate, London, EC1A 4HD</p>
+	</div>
+
+
+
+</div></div> 
+</footer>
+
+    
+
+    
+    <!--[if gt IE 7]><i -->
+    <script src="./meterpage-smets2_files/core.js"></script>
+    
+    <!--<![endif]-->
+    
+        <script src="./meterpage-smets2_files/webcomponents.js"></script>
+        <script src="./meterpage-smets2_files/digital-workplace.js"></script>
+    
+
+    
+    
+
+    <!--[if IE 8]></div><![endif]-->
+
+    
+        <div class="environment-marker">
+            <div class="environment-marker__container">DEV03 (Debug)</div>
+        </div>
+    
+
+    
+
+<script id="js-extent-dialog" type="text/x-template" data-title="Where in the UK do you live?"> 
+	<div>
+	<p>The law can vary in different parts of the UK.</p>
+</div>
+    <ul class="extent-selection">
+        
+                <li><a class="btn btn-small" rel="alternate" href="?lang=en-GB">England</a></li>
+            
+                <li><a class="btn btn-small" rel="alternate" href="?lang=en-NIR">Northern Ireland</a></li>
+            
+                <li><a class="btn btn-small" rel="alternate" href="?lang=en-SCT">Scotland</a></li>
+            
+                <li><a class="btn btn-small" rel="alternate" href="?lang=en-WLS">Wales</a></li>
+            
+    </ul>
+</script>
+    
+
+<div class="home-extent-popup__mask" id="home-extent-popup" style="display:none;">
+    <div class="home-extent-popup__dialog" role="dialog" tabindex="-1" aria-labelledby="extent-popup-heading">
+        <img src="./meterpage-smets2_files/ca-logo-compact.svg" class="home-extent-popup__logo" onerror="this.onerror=null;this.src=&#39;/Static/images/logos/ca-logo-compact.svg.png&#39;" alt="Citizens Advice">
+        <h2 class="home-extent-popup__heading">Get advice for:</h2>
+        
+                <div class="home-extent-popup__options">
+             
+                <a class="home-extent-popup__link" href="https://epidev03.citizensadvice.org.uk/development/test-tools/smartmeter-checker-tool/?lang=en-GB" lang="en-GB">England</a>
+             
+                <a class="home-extent-popup__link" href="https://epidev03.citizensadvice.org.uk/development/test-tools/smartmeter-checker-tool/?lang=en-NIR" lang="en-NIR">Northern Ireland</a>
+             
+                <a class="home-extent-popup__link" href="https://epidev03.citizensadvice.org.uk/development/test-tools/smartmeter-checker-tool/?lang=en-SCT" lang="en-SCT">Scotland</a>
+             
+                <a class="home-extent-popup__link" href="https://epidev03.citizensadvice.org.uk/development/test-tools/smartmeter-checker-tool/?lang=en-WLS" lang="en-WLS">Wales</a>
+            
+                </div>
+            
+    </div>
+</div>
+
+<script>
+            
+    (function(){
+                
+        if ( /\bCABExtent=[^;]*(;|$)/.test(document.cookie) || /\bno-cookies\b/.test(document.documentElement.className)) {
+            return;
+        }
+                
+        document.getElementById('home-extent-popup').style.display = "";
+
+        $(function ($) {
+
+            // Set keyboard focus to first language (i.e. England).
+            $('a.home-extent-popup__link').first().focus();
+
+            var lang = document.documentElement.lang;
+
+            function chooseCurrent() {
+                $(document).off('.home-extent-popup');
+                $('#home-extent-popup').remove();
+                document.cookie = 'CABExtent=' + lang + '; path=/; expires=' + new Date(Date.now() + 172800000).toGMTString();
+            }
+
+            // Don't reload the page for the current language
+            $(document)
+                .on('keydown.home-extent-popup', function (e) {
+                    // Close the dialog using the escape key
+                    if (!e.isDefaultPrevented() && e.keyCode === 27) {
+                        chooseCurrent();
+                    }
+                });
+
+            // if shift-tab pressed on first language then focus on last language (England -> Wales).
+            $('a.home-extent-popup__link').first().on('keydown', function (e) {
+                if (e.key === 'Tab' && e.shiftKey) {
+                    e.preventDefault();
+                    $('a.home-extent-popup__link').last().focus();
+                }
+            });
+
+            // if tab pressed on last language then focus on first language (i.e. Wales -> England).
+            $('a.home-extent-popup__link').last().on('keydown', function (e) {
+                if (e.key === 'Tab' && !e.shiftKey) {
+                    e.preventDefault();
+                    $('a.home-extent-popup__link').first().focus();
+                }
+            });
+
+            $('#home-extent-popup').on('click', '[lang]', function (e) {
+                if (this.lang === lang) {
+                    e.preventDefault();
+                    chooseCurrent();
+                }
+            });
+        });
+
+    }());
+</script>
+
+
+    <input type="hidden" value="False" name="astat">
+
+    
+
+
+<iframe tabindex="-1" aria-hidden="true" role="presentation" title="Intentionally blank" name="lpSS_86791516657" id="lpSS_86791516657" src="./meterpage-smets2_files/storage.secure.min.html" style="width: 0px; height: 0px; position: absolute; top: -1000px; left: -1000px; display: none;"></iframe><script id="lpSS_55568077909" src="./meterpage-smets2_files/storage.secure.min.js"></script></body></html>
