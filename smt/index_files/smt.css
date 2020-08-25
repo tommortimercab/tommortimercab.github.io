@@ -92,3 +92,7 @@
 .supplier:last-of-type {
     border-bottom: none;
 }
+.meter--details.non-smart dl {
+    background: #f4f4f4;
+    border-left: 4px solid #8D9093;
+}
