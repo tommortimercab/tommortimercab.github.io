@@ -1,4 +1,4 @@
-.smart--meter h1, .meter--details h1, .meter--details h2, .meter--other h2, .meter--info h2, .meter--info h3, .meter--other h3, .supplier--info h1, .supplier--info h2, .supplier--list h2, .supplier--list h3 {
+.smart--meter h1, .meter--details h1, .meter--details h2, .meter--details h3, .meter--other h2, .meter--info h2, .meter--info h3, .meter--other h3, .supplier--info h1, .supplier--info h2, .supplier--list h2, .supplier--list h3 {
     color: black;
 }
 .supplier--list h2 {
@@ -92,7 +92,8 @@
 .supplier:last-of-type {
     border-bottom: none;
 }
-.meter--details.non-smart dl {
+.meter--details.non-smart dl, #RootPlaceHolder_RootPlaceHolder_PnlScenario5_9 dl {
     background: #f4f4f4;
     border-left: 4px solid #8D9093;
+    border-bottom: none!important;
 }
