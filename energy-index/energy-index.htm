@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <!-- saved from url=(0064)https://www.citizensadvice.org.uk/consumer/energy/energy-supply/ -->
 <html class="js hide-cookie-monster" lang="en-GB"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+<!--START DW FILTERS-->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+<script src="filters.js"></script>
+<!--END DW FILTERS-->
 <script async="" src="./energy-index_files/analytics.js"></script><script type="text/javascript" async="" src="./energy-index_files/analytics.js"></script><script async="" src="./energy-index_files/gtm.js"></script><script type="text/javascript" async="async" src="./energy-index_files/le-mtagconfig.js"></script>
 <script type="text/javascript" async="async" src="./energy-index_files/lp-gatracking.js"></script>
 
@@ -60,8 +63,9 @@ if(!window._rollbarConfig)window.onerror=function(m,u,l){ga('send','event','Erro
 </script>
     
 <meta name="description" content="Get advice if you&#39;re having problems with your gas or electricity supply."><meta name="cab-template" content="BetaIndexPage"><meta name="cab-id" content="53872"><meta name="google-site-verification" content="G_YLKdZFN3JtUMLHXFvqerm8eMg1ISZgmZB92KjrXkM"><script charset="UTF-8" id="_lpTagScriptId_0" src="./energy-index_files/jsonp"></script></head>
-
-<body>
+<!--START DW FILTERS-->
+<body ng-app="dwFilters">
+<!--END DW FILTERS-->
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T5MB575" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
@@ -698,10 +702,24 @@ if(!window._rollbarConfig)window.onerror=function(m,u,l){ga('send','event','Erro
         </div>
     </div>
 
-        <div class="main-content">
+  
             
+<!--START DW FILTERS-->
+<div class="main-content" ng-controller="policyList"> 
+    <h2>Search energy <input ng-model="query"></h2>
+    <!--<label for="mandatorySelect"> Filter by Mandatory/Optional </label>
+    <select ng-model="filter" id="mandatorySelect">
+            <option value="Mandatory">Mandatory</option>
+            <option value="Optional">Optional</option>
+    </select>
+    <button id="mandatoryReset" onClick="window.location.reload();">Reset</button>-->
+    <div ng-repeat="policy in policies | filter: {'header' : query}">
+        <h3><a href="{{policy.content}}">{{policy.header}}</a></h3>
+    </div>   
+</section>
+<!--END DW FILTERS-->
 
-    <div class="contents-page">
+   <!-- <div class="contents-page">
         
 
         
@@ -1005,7 +1023,7 @@ if(!window._rollbarConfig)window.onerror=function(m,u,l){ga('send','event','Erro
              
              </div>
         
-    </div>
+    </div> -->
     
     
 
