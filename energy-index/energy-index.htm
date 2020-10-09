@@ -713,9 +713,9 @@ if(!window._rollbarConfig)window.onerror=function(m,u,l){ga('send','event','Erro
             <option value="Optional">Optional</option>
     </select>
     <button id="mandatoryReset" onClick="window.location.reload();">Reset</button>-->
-    <div ng-repeat="policy in policies | filter: {'header' : query}">
-        <p><a href="{{policy.content}}">{{policy.header}}</a></p>
-    </div>   
+    <ul ng-repeat="policy in policies | filter: {'header' : query}">
+        <lk><a href="{{policy.content}}">{{policy.header}}</a></li>
+    </ul>   
 </section>
 <!--END DW FILTERS-->
 
